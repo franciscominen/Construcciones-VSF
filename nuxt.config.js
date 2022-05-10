@@ -10,6 +10,7 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
+  target: 'static',
   server: {
     port: 8000 // default: 3000
   },
