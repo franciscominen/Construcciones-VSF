@@ -16,10 +16,15 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    // CSS file in the project
+    '~/assets/main.css',
+    // SCSS file in the project
+    '~/assets/main.scss'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: "~/plugins/lottie-player.js", mode: "client" }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -52,5 +57,14 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    loaders: {
+      sass: {
+        implementation: require('sass'),
+      },
+      scss: {
+        implementation: require('sass'),
+      },
+    },
+  }
 }
