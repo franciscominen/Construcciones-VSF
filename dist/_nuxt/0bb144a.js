@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{280:function(e,n,t){"use strict";t.r(n);var c={name:"NuxtTutorial"},l=t(61),component=Object(l.a)(c,(function(){var e=this,n=e.$createElement;return(e._self._c||n)("h1",[e._v("VSF Construcciones - Welcome")])}),[],!1,null,null,null);n.default=component.exports}}]);
