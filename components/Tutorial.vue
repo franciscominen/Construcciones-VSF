@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-  <h1>VSF Construcciones</h1>
+  <h1>VSF Construcciones - Welcome</h1>
 </template>
 
 <script>
