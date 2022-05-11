@@ -28,6 +28,13 @@ h3 {
     font-family: $displayFont;
 }
 
-p, a {
+p,
+a {
     font-family: $textFont;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }

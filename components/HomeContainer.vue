@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
   <main class="home_mainWrapper">
-    <section>
+    <section class="home_titleSection">
       <h1>Construcción <br />sin <span>estrés</span>.</h1>
       <lottie-player
         autoplay
@@ -12,12 +12,20 @@
         debug
       ></lottie-player>
     </section>
+    <section class="home_footerWrapper">
+      <SocialMediaLinks :classColor="`socialMedia_lightblue`" />
+      <button>Descubri sobre nosotros</button>
+      <img src="@/assets/images/icons/msg-modal-icon.svg" alt="" style="width: 50px" class="img-consult"/>
+    </section>
   </main>
 </template>
 
 <script>
+import SocialMediaLinks from '@/components/SocialMediaLinks.vue'
+
 export default {
   name: 'HomeContainer',
+  components: { SocialMediaLinks }
 }
 </script>
 
@@ -26,27 +34,40 @@ export default {
 
 .home_mainWrapper {
   min-height: 100vh;
-  background-color: $white;
-  background-image: url('@/assets/images/home-bg.svg');
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 15em;
-  background-attachment: fixed;
+  height: auto;
+  background: $white url('@/assets/images/home-bg.svg') no-repeat fixed center
+    20em;
   background-size: contain;
-  section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2em;
+
+  .home_titleSection {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 2em;
+    top: 6em;
+    h1 {
+      font-size: 68px;
+      font-weight: 900;
+      line-height: 1.05;
+      color: $blue;
+      span {
+        color: $green;
+      }
+    }
   }
-  h1 {
-    font-size: 68px;
-    font-weight: 900;
-    line-height: 1.05;
-    color: $blue;
-    span {
-      color: $green;
+
+  .home_footerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .img-consult {
+      position: sticky;
+      bottom: 2em;
+      right: 5%;
     }
   }
 }

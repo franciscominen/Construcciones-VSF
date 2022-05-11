@@ -26,10 +26,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   padding: 28px 5em;
-  border-bottom: 1px solid #eaeaea;
   img {
     width: 180px;
   }
