@@ -40,11 +40,14 @@ export default {
     a {
       border: 1px solid $blue;
       border-radius: 3px;
-      width: 45px;
-      height: 45px;
+      width: 38px;
+      height: 38px;
       display: flex;
       justify-content: center;
       align-items: center;
+      img {
+        max-width: 32px;
+      }
     }
   }
 }

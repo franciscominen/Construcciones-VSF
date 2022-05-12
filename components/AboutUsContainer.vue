@@ -1,5 +1,5 @@
 <template>
-  <main class="aboutUs_mainWrapper">
+  <main class="aboutUs_mainWrapper" id='about'>
     <h1>Quienes somos?</h1>
     <section class="aboutUs_infoWrapper">
       <p>
@@ -31,7 +31,7 @@ export default {
 
 .aboutUs_mainWrapper {
   min-height: 100vh;
-  padding: 8em 6em 6em 6em;
+  padding: 8em 6em 1em 6em;
   background: $blue url('@/assets/images/blue-pattern.svg') no-repeat fixed center
     20em;
   background-size: contain;

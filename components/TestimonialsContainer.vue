@@ -1,6 +1,6 @@
 <template>
   <!-- USE FIREBASE -->
-  <main class="testimonials_mainWrapper">
+  <main class="testimonials_mainWrapper" id='testimonials'>
     <article class="testimonials_familyCard">
       <img src="@/assets/images/family.svg" alt="" />
       <h3>Familia Uno</h3>
@@ -50,7 +50,7 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 1.5em;
-  padding: 0 5% 4em 5%;
+  padding: 6em 5% 4em 5%;
   background: $blue url('@/assets/images/blue-pattern.svg') no-repeat fixed center
     20em;
   background-size: contain;

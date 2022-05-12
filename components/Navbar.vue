@@ -1,12 +1,41 @@
 <template>
   <nav>
-    <img src="@/assets/images/logo-1.svg" alt="Viviendas Santa Fe" />
+    <img
+      @click="goTo('#home')"
+      src="@/assets/images/logo-1.svg"
+      alt="Viviendas Santa Fe"
+    />
     <ul>
-      <li><NuxtLink to="/">Inicio</NuxtLink></li>
+      <li>
+        <button @click="handleToggleDropdown">Inicio</button>
+        <ul
+          :class="[
+            toggleDropdown ? 'navbar_dropdown' : 'navbar_dropdown--disabled',
+          ]"
+        >
+          <li>
+            <button @click="closeDropdownAndgoTo('#about')">
+              <strong>></strong> Nosotros
+            </button>
+          </li>
+          <li>
+            <button @click="closeDropdownAndgoTo('#testimonials')">
+              <strong>></strong> Testimonios
+            </button>
+          </li>
+          <li>
+            <button @click="closeDropdownAndgoTo('#activity')">
+              <strong>></strong> Que hacemos
+            </button>
+          </li>
+        </ul>
+      </li>
       <li><NuxtLink to="/">Construcciones</NuxtLink></li>
       <li><NuxtLink to="/">Modelos</NuxtLink></li>
       <li><NuxtLink to="/">Equipo</NuxtLink></li>
-      <li><NuxtLink to="/contact" class="contact_navLink">Contacto</NuxtLink></li>
+      <li>
+        <NuxtLink to="/contact" class="contact_navLink">Contacto</NuxtLink>
+      </li>
     </ul>
   </nav>
 </template>
@@ -14,6 +43,23 @@
 <script>
 export default {
   name: 'Navbar',
+  data() {
+    return {
+      toggleDropdown: false,
+    }
+  },
+  methods: {
+    handleToggleDropdown() {
+      return (this.toggleDropdown = !this.toggleDropdown)
+    },
+    goTo(location) {
+      this.$router.push(location)
+    },
+    closeDropdownAndgoTo(location) {
+      this.handleToggleDropdown()
+      this.$router.push(location)
+    },
+  },
 }
 </script>
 
@@ -25,13 +71,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+  background: $white;
   position: fixed;
   width: 100%;
   top: 0;
-  padding: 28px 5em;
+  padding: 24px 5em;
   img {
     width: 180px;
+    cursor: pointer;
   }
   ul {
     align-self: end;
@@ -45,12 +92,40 @@ nav {
         font-weight: 500;
         color: $lightblue;
       }
+      button {
+        font-size: 18px;
+        font-weight: 500;
+        color: $lightblue;
+      }
       .contact_navLink {
         border: 1px solid $lightblue;
         padding: 8px 18px;
         border-radius: 5px;
       }
     }
+  }
+  .navbar_dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+
+
+    gap: 16px;
+    margin-top: 18px;
+    background: $white;
+    padding: 32px 22px 22px 22px;
+    margin: 0 -24px;
+    border-radius: 6px;
+    li {
+      color: $lightblue;
+      font-family: $textFont;
+      font-size: 16px;
+    }
+  }
+  .navbar_dropdown--disabled {
+    display: none;
   }
 }
 </style>

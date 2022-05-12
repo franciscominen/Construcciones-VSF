@@ -1,5 +1,5 @@
 <template>
-  <main class="activity_mainWrapper">
+  <main class="activity_mainWrapper" id='activity'>
     <h1>A que nos dedicamos?</h1>
     <section class="activity_infoWrapper">
       <lottie-player
@@ -40,7 +40,7 @@ export default {
 
 .activity_mainWrapper {
   min-height: 100vh;
-  padding: 8em 6em 4em 6em;
+  padding: 6em 6em 4em 6em;
   background: $lightblue url('@/assets/images/lightblue-pattern.svg') no-repeat
     fixed center 20em;
   background-size: contain;
