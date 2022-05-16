@@ -1,11 +1,11 @@
 <template>
-  <main class="activity_mainWrapper" id='activity'>
+  <main class="activity_mainWrapper" id="activity">
     <h1>A que nos dedicamos?</h1>
     <section class="activity_infoWrapper">
       <lottie-player
         autoplay
         loop
-        style="width: 650px"
+        class="activity_animation"
         src="https://assets4.lottiefiles.com/packages/lf20_griqijxi.json"
         speed="1"
         debug
@@ -22,9 +22,7 @@
       </p>
     </section>
     <button class="goToModels_button">
-      <p>
-        NUESTROS MODELOS MAS VENDIDOS
-      </p> 
+      <p>NUESTROS MODELOS MAS VENDIDOS</p>
     </button>
   </main>
 </template>
@@ -71,6 +69,12 @@ export default {
       line-height: 1.4;
       width: 50%;
     }
+
+    .activity_animation {
+      max-width: 650px;
+      min-width: 100px;
+      object-fit: contain;
+    }
   }
 
   .goToModels_button {
@@ -80,6 +84,49 @@ export default {
     border: 2px solid $white;
     border-radius: 4px;
     padding: 18px 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .activity_mainWrapper {
+    min-height: auto;
+    padding: 6em 8% 4em 8%;
+    background-size: 250%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      color: $white;
+      font-size: 58px;
+      line-height: 1.3;
+      font-weight: 900;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .activity_infoWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin-bottom: 2em;
+
+      p {
+        color: $white;
+        font-size: 32px;
+        font-weight: 100;
+        line-height: 1.4;
+        width: auto;
+      }
+
+      .activity_animation {
+        margin-bottom: 0;
+        order: 1;
+      }
+    }
   }
 }
 </style>

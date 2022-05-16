@@ -74,7 +74,7 @@ nav {
   background: $white;
   position: fixed;
   width: 100%;
-  top: 0;
+  /* top: 0; */
   padding: 24px 5em;
   img {
     width: 180px;

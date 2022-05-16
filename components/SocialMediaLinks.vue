@@ -19,11 +19,11 @@
   </ul>
 </template>
 
-<script>
+<script lang='ts'>
 export default {
   name: 'SocialMediaLinks',
   props: {
-    classColor: String,
+    classColor: String || Array,
   },
 }
 </script>
@@ -57,6 +57,50 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 16px;
+  li {
+    a {
+      border: 1px solid $lightblue;
+      border-radius: 3px;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        filter: brightness(2.2);
+      }
+    }
+  }
+}
+
+.socialMedia_white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  li {
+    a {
+      border: 1px solid $white;
+      border-radius: 3px;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        filter: brightness(10);
+      }
+    }
+  }
+}
+
+.socialMedia_lightblue-mobile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  order: 5;
+  margin: 32px 0;
   li {
     a {
       border: 1px solid $lightblue;
