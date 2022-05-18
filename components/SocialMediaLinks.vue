@@ -23,12 +23,12 @@
 export default {
   name: 'SocialMediaLinks',
   props: {
-    classColor: String || Array,
+    classColor: [String, Array],
   },
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '@/assets/main.scss';
 
 .socialMedia_blue {

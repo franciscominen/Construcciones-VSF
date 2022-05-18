@@ -26,8 +26,8 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-@import '@/assets/main.scss';
+<style lang='scss' scoped>
+ @import '@/assets/main.scss';
 
 .aboutUs_mainWrapper {
   min-height: 100vh;
@@ -102,5 +102,5 @@ export default {
       }
     }
   }
-}
+} 
 </style>

@@ -17,15 +17,17 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // CSS file in the project
     '~/assets/main.css',
-    // SCSS file in the project
-    '~/assets/main.scss'
   ],
+/*   styleResources: {
+    scss: [
+      '~/assets/main.scss',
+    ]
+  }, */
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: "~/plugins/lottie-player.js", mode: "client" }, 
+    { src: "~/plugins/lottie-player.js", mode: "client" },
     { src: "~/plugins/vue-carousel.js", mode: 'client' }
   ],
 
@@ -36,6 +38,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/style-resources'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -61,14 +64,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    loaders: {
+/*     loaders: {
       sass: {
         implementation: require('sass'),
       },
       scss: {
         implementation: require('sass'),
       },
-    },
+    }, */
   },
 
   /*
