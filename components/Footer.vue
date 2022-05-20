@@ -69,12 +69,13 @@ export default {
   components: { SocialMediaLinks },
   data() {
     return {
-      isMobile: false
+      isMobile: Boolean
     }
   },
   methods: {},
   computed: {
-    responsive(): boolean {
+
+/*     responsive(): function (): boolean {
       if (process.client) {
         let width = window.innerWidth
         console.log(width);
@@ -84,10 +85,10 @@ export default {
         }
       }
       return this.isMobile;
-    },
+    }, */
   },
   created() {
-    console.log(this.responsive);
+/*     this.responsive(); */
     
   },
 }

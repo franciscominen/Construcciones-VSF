@@ -30,7 +30,7 @@ export default {
  @import '@/assets/main.scss';
 
 .aboutUs_mainWrapper {
-  min-height: 100vh;
+  min-height: auto;
   padding: 8em 6em 1em 6em;
   background: $blue url('@/assets/images/blue-pattern.svg') no-repeat fixed
     center 20em;

@@ -2,9 +2,9 @@
   <div>
     <Navbar v-if="!isMobile" />
     <NavbarMobile v-else />
-    <HomeContainer />
+    <HomeContainer :isMobile='isMobile'/>
     <AboutUsContainer />
-    <TestimonialsContainer v-if='!isMobile'/>
+    <TestimonialsContainer />
     <ActivityContainer />
     <Footer />
   </div>
@@ -33,30 +33,27 @@ export default Vue.extend({
   },
   data() {
     return {
-      isMobile: false
+
     }
   },
   methods: {},
   computed: {
-    responsive(): boolean {
+    isMobile(): boolean {
       if (process.client) {
         let width = window.innerWidth
-        console.log(width);
-        
         if (width < 1024) {
-          return this.isMobile = true;
+          return true
         }
       }
-      return this.isMobile;
+      return false
     },
   },
   created() {
-    console.log(this.responsive);
-    
+    this.isMobile
   },
 })
 </script>
 
 <style lang="scss">
-  @import '@/assets/main.scss';
+@import '@/assets/main.scss';
 </style>

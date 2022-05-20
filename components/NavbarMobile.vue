@@ -1,14 +1,21 @@
 <template>
   <nav class="mobile-nav">
     <div class="navClose_header">
-      <img src="@/assets/images/logo-1.svg" alt="" class="nav_logo" @click="goTo('#home')"/>
+      <img
+        src="@/assets/images/logo-1.svg"
+        alt=""
+        class="nav_logo"
+        @click="goTo('#home')"
+      />
       <img
         src="@/assets/images/open-nav-button.svg"
         alt=""
         @click="handleMobileMenu"
       />
     </div>
-    <div :class="[isMobileMenuOpen ? 'navOpen_wrapper' : 'navOpen_wrapper-close']">
+    <div
+      :class="[isMobileMenuOpen ? 'navOpen_wrapper' : 'navOpen_wrapper-close']"
+    >
       <div class="navOpen_header">
         <img src="@/assets/images/logo-3.svg" alt="" class="nav_logo" />
         <img
@@ -19,33 +26,43 @@
       </div>
       <ul class="navLinks_mobile">
         <li>
-          <NuxtLink to="" class="navLink_mobile">
-            <img src="@/assets/images/icons/inicio-icon.svg" alt="" />
-            <h4>Inicio</h4>
+          <NuxtLink to="/" class="navLink_mobile">
+            <button @click="handleMobileMenu">
+              <img src="@/assets/images/icons/inicio-icon.svg" alt="" />
+              <h4>Inicio</h4>
+            </button>
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="" class="navLink_mobile">
-            <img src="@/assets/images/icons/constructions-icon.svg" alt="" />
-            <h4>Construcciones</h4>
+          <NuxtLink to="/constructions" class="navLink_mobile">
+            <button @click="handleMobileMenu">
+              <img src="@/assets/images/icons/constructions-icon.svg" alt="" />
+              <h4>Construcciones</h4>
+            </button>
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="" class="navLink_mobile">
-            <img src="@/assets/images/icons/models-icon.svg" alt="" />
-            <h4>Modelos</h4>
+          <NuxtLink to="/models" class="navLink_mobile">
+            <button>
+              <img src="@/assets/images/icons/models-icon.svg" alt="" />
+              <h4>Modelos</h4>
+            </button>
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="" class="navLink_mobile">
-            <img src="@/assets/images/icons/team-icon.svg" alt="" />
-            <h4>Equipo</h4>
+          <NuxtLink to="/leadership" class="navLink_mobile">
+            <button>
+              <img src="@/assets/images/icons/team-icon.svg" alt="" />
+              <h4>Equipo</h4>
+            </button>
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="" class="navLink_mobile" style="border: none">
-            <img src="@/assets/images/icons/contact-icon.svg" alt="" />
-            <h4>Contacto</h4>
+          <NuxtLink to="/contact" class="navLink_mobile" style="border: none">
+            <button>
+              <img src="@/assets/images/icons/contact-icon.svg" alt="" />
+              <h4>Contacto</h4>
+            </button>
           </NuxtLink>
         </li>
       </ul>
@@ -69,9 +86,13 @@ export default {
     handleMobileMenu() {
       return (this.isMobileMenuOpen = !this.isMobileMenuOpen)
     },
-    goTo(path){
-     return this.$router.push(path);
-    }
+    goTo(path) {
+      return this.$router.push(path)
+    },
+    goToAndCloseMenu(path) {
+      this.handleMobileMenu()
+      return this.$router.push(path)
+    },
   },
 }
 </script>
@@ -123,13 +144,27 @@ export default {
         align-items: center;
         border-bottom: 1px solid $white;
         padding: 12px 0;
-        img {
-          width: 72px;
+        width: 100%;
+        button {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          img {
+            width: 72px;
+          }
+          h4 {
+            color: $white;
+            font-size: 28px;
+            font-weight: 300;
+          }
         }
-        h4 {
-          color: $white;
-          font-size: 28px;
-          font-weight: 500;
+      }
+
+      .nuxt-link-active {
+        button {
+          h4 {
+            font-weight: 600;
+          }
         }
       }
     }
