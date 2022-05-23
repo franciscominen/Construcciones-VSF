@@ -19,11 +19,11 @@ export default {
   css: [
     '~/assets/main.css',
   ],
-/*   styleResources: {
-    scss: [
-      '~/assets/main.scss',
-    ]
-  }, */
+  /*   styleResources: {
+      scss: [
+        '~/assets/main.scss',
+      ]
+    }, */
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -43,41 +43,60 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/firebase'
   ],
+
+  firebase: {
+    config: {
+      apiKey: "AIzaSyBt_IUivmdaWIijgTFh5ZcDRnlFpxeOB5k",
+      authDomain: "viviendassantafe.firebaseapp.com",
+      projectId: "viviendassantafe",
+      storageBucket: "viviendassantafe.appspot.com",
+      messagingSenderId: "716133326887",
+      appId: "1:716133326887:web:7a0d5807cfdcfd306fee02"
+    },
+    services: {
+      auth: {
+        persistence: 'local', // default
+        initialize: {
+          onAuthStateChangedAction: 'onAuthStateChangedAction',
+          subscribeManually: false
+        },
+        ssr: false,
+      },
+      firestore: true,
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
   },
 
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
       lang: 'en',
     },
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-/*     loaders: {
+    loaders: {
       sass: {
         implementation: require('sass'),
       },
       scss: {
         implementation: require('sass'),
       },
-    }, */
+    },
   },
 
   /*
 ** Router configuration
 */
   router: {
+    middleware: ['auth'],
     scrollBehavior: async (to, from, savedPosition) => {
       if (savedPosition) {
         return savedPosition

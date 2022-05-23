@@ -36,6 +36,14 @@
       <li>
         <NuxtLink to="/contact" class="contact_navLink">Contacto</NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="/admin"
+          ><img
+            src="@/assets/images/icons/admin-icon.svg"
+            alt="Sing In"
+            class="admin_icon"
+        /></NuxtLink>
+      </li>
     </ul>
   </nav>
 </template>
@@ -91,7 +99,12 @@ nav {
         font-size: 18px;
         font-weight: 500;
         color: $lightblue;
+        displafg .admin_icon {
+          max-width: 26px;
+          margin: auto 0;
+        }
       }
+
       button {
         font-size: 18px;
         font-weight: 500;
@@ -102,6 +115,15 @@ nav {
         padding: 8px 18px;
         border-radius: 5px;
       }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .admin_icon {
+          max-width: 26px;
+        }
+      }
     }
   }
   .navbar_dropdown {
@@ -110,7 +132,6 @@ nav {
     align-items: flex-start;
     justify-content: flex-start;
     position: absolute;
-
 
     gap: 16px;
     margin-top: 18px;
