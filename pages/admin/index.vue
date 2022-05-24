@@ -62,7 +62,6 @@ export default {
       }
     },
   },
-  mounted() {},
 }
 </script>
 
@@ -116,7 +115,7 @@ main {
       width: 20em;
       color: $lightblue;
       font-weight: 600;
-      transition: .2s;
+      transition: 0.2s;
       &:focus {
         outline: none;
         border: 1px solid $green;
@@ -149,6 +148,47 @@ main {
     text-decoration: underline;
     margin-top: auto;
     padding: 24px;
+  }
+}
+
+@media (max-width: 460px) {
+  main {
+    .errorLogin_toast {
+      -webkit-animation: flip-in-hor-bottom 4s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: flip-in-hor-bottom 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      margin-top: 22px;
+    }
+
+    header {
+      padding: 18px;
+      img {
+        max-width: 180px;
+      }
+      h1 {
+        font-size: 32px;
+      }
+    }
+
+    .adminForm_wrapper {
+      padding: 24px;
+      width: 95%;
+
+      input {
+        padding: 12px;
+        font-size: 16px;
+        width: 100%;
+      }
+      button {
+        font-size: 18px;
+        padding: 12px;
+      }
+    }
+
+    a {
+      font-size: 14px;
+      padding: 18px;
+    }
   }
 }
 

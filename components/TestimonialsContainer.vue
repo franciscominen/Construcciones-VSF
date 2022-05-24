@@ -62,15 +62,15 @@ export default {
         wheelControl: false,
         infiniteScroll: true,
         autoPlay: true,
-         breakpoints: {
+        breakpoints: {
           1024: {
             centerMode: false,
-            itemsToShow: 2
+            itemsToShow: 2,
           },
           1460: {
-            itemsToShow: 3
-          }
-        }
+            itemsToShow: 3,
+          },
+        },
       },
     }
   },
@@ -99,7 +99,7 @@ export default {
   .hooper {
     height: auto;
     text-align: center;
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
   }
   .hooper-slide {
@@ -125,11 +125,10 @@ export default {
     filter: invert(1);
     transform: translateY(-15em);
   }
-
-  @media (max-width: 1024px) {
-    .hooper {
-         width: 100%;
-    }
+}
+@media (max-width: 1024px) {
+  .testimonials_mainWrapper {
+    background-size: 250%;
   }
 }
 </style>

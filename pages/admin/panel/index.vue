@@ -19,14 +19,15 @@
       </ul>
     </nav>
 
-    <ConsultasView v-if="!toggleView"/>
-    <EditModelosView v-else/>
+    <ConsultasView v-if="!toggleView" :consults="consults" />
+    <EditModelosView v-else />
   </main>
 </template>
 
 <script>
 import ConsultasView from '@/components/admin/ConsultasView.vue'
 import EditModelosView from '@/components/admin/EditModelosView.vue'
+
 export default {
   name: 'AdminPanel',
   components: { ConsultasView, EditModelosView },
@@ -35,16 +36,30 @@ export default {
       toggleView: false,
     }
   },
+  computed: {
+    consults() {
+      return this.$store.state.consults
+    },
+    ansConsults() {
+      let consults = this.$store.getters.getConsults.filter((consult) => {
+        consult.answered === true
+      })
+      return consults
+    },
+  },
+  async fetch() {
+    await this.$store.dispatch('setConsults')
+  },
   methods: {
     async signOut() {
       await this.$fire.auth.signOut()
     },
     showConsults() {
-       return this.toggleView = false;
+      return (this.toggleView = false)
     },
     showModels() {
-      return this.toggleView = true;
-    }
+      return (this.toggleView = true)
+    },
   },
 }
 </script>
@@ -71,6 +86,7 @@ main {
       margin-right: auto;
       margin-left: 22px;
     }
+
     ul {
       display: flex;
       justify-content: center;
@@ -85,6 +101,32 @@ main {
         img {
           width: 32px;
           margin-left: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  main {
+    padding: 0 4px;
+    nav {
+      padding: 16px 8px;
+      h1 {
+        display: none;
+      }
+      img {
+        width: 48px;
+      }
+      ul {
+        gap: 8px;
+        li button {
+          font-size: 18px;
+
+          img {
+            width: 28px;
+            margin-left: 16px;
+          }
         }
       }
     }
