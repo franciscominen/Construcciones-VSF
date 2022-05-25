@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar v-if="!isMobile" />
+    <Navbar v-if="$device.isDesktop" />
     <NavbarMobile v-else />
 
     <main class="contact-main">
@@ -61,21 +61,6 @@ export default {
   data() {
     return {}
   },
-  methods: {},
-  computed: {
-    isMobile(): boolean {
-      if (process.client) {
-        let width = window.innerWidth
-        if (width < 1024) {
-          return true
-        }
-      }
-      return false
-    },
-  },
-  created() {
-    this.isMobile
-  },
 }
 </script>
 
@@ -83,8 +68,11 @@ export default {
 @import '@/assets/main.scss';
 
 .contact-main {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 8em;
   height: auto;
   padding: 9em 0 3em 0;
@@ -141,8 +129,10 @@ iframe {
 
 @media (max-width: 1024px) {
   .contact-main {
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
     gap: 2em;
     padding: 7em 5% 3em 5%;
@@ -162,10 +152,11 @@ iframe {
     }
 
     .contactData_wrapper {
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 32px;
-      padding: 18px 0 0 0;
+      padding: 38px 0 0 0;
       border-left: none;
       border-top: 1px solid rgb(225, 225, 225);
       height: auto;

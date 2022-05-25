@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Navbar v-if="!isMobile" />
+    <Navbar v-if="$device.isDesktop" />
     <NavbarMobile v-else />
-    <HomeContainer :isMobile='isMobile'/>
+    <HomeContainer />
     <AboutUsContainer />
     <TestimonialsContainer />
     <ActivityContainer />
@@ -30,27 +30,7 @@ export default Vue.extend({
     ActivityContainer,
     TestimonialsContainer,
     Footer,
-  },
-  data() {
-    return {
-
-    }
-  },
-  methods: {},
-  computed: {
-    isMobile(): boolean {
-      if (process.client) {
-        let width = window.innerWidth
-        if (width < 1024) {
-          return true
-        }
-      }
-      return false
-    },
-  },
-  created() {
-    this.isMobile
-  },
+  }
 })
 </script>
 

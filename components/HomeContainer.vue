@@ -14,7 +14,7 @@
       ></lottie-player>
     </section>
     <section class="home_footerWrapper">
-      <SocialMediaLinks :classColor="`socialMedia_blue`" v-if='!isMobile'/>
+      <SocialMediaLinks :classColor="`socialMedia_blue`" v-if='$device.isDesktop'/>
       <NuxtLink to="#about" class="goToAbout_button">
         <h3>Descubri sobre nosotros</h3>
         <img src="@/assets/images/icons/down-arrow.svg" alt="" />
@@ -35,9 +35,6 @@ import SocialMediaLinks from '@/components/SocialMediaLinks.vue'
 export default {
   name: 'HomeContainer',
   components: { SocialMediaLinks },
-  props: {
-    isMobile: Boolean,
-  },
 }
 </script>
 

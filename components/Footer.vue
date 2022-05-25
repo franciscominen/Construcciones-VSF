@@ -13,7 +13,7 @@
         </p>
         <SocialMediaLinks
           :classColor="[
-            isMobile
+            $device.isDesktop
               ? 'socialMedia_lightblue-mobile'
               : 'socialMedia_lightblue-mobile',
           ]"
@@ -67,30 +67,6 @@ import SocialMediaLinks from './SocialMediaLinks.vue'
 export default {
   name: 'Footer',
   components: { SocialMediaLinks },
-  data() {
-    return {
-      isMobile: Boolean
-    }
-  },
-  methods: {},
-  computed: {
-
-/*     responsive(): function (): boolean {
-      if (process.client) {
-        let width = window.innerWidth
-        console.log(width);
-        
-        if (width < 1024) {
-          return this.isMobile = true;
-        }
-      }
-      return this.isMobile;
-    }, */
-  },
-  created() {
-/*     this.responsive(); */
-    
-  },
 }
 </script>
 
