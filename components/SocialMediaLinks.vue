@@ -33,7 +33,6 @@ export default {
 
 .socialMedia_blue {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 16px;
   li {
