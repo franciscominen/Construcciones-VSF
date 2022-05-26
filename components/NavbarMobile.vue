@@ -50,7 +50,7 @@
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/leadership" class="navLink_mobile">
+          <NuxtLink to="/team" class="navLink_mobile">
             <button>
               <img src="@/assets/images/icons/team-icon.svg" alt="" />
               <h4>Equipo</h4>
