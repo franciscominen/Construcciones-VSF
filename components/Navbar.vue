@@ -1,7 +1,7 @@
 <template>
   <nav>
     <img
-      @click="goTo('#home')"
+      @click="goTo({ path: '/', hash: '#home' })"
       src="@/assets/images/logo-1.svg"
       alt="Viviendas Santa Fe"
     />
@@ -14,17 +14,17 @@
           ]"
         >
           <li>
-            <button @click="closeDropdownAndgoTo('#about')">
+            <button @click="closeDropdownAndgoTo({ path: '/', hash: '#about' })">
               <strong>></strong> Nosotros
             </button>
           </li>
           <li>
-            <button @click="closeDropdownAndgoTo('#testimonials')">
+            <button @click="closeDropdownAndgoTo({ path: '/', hash: '#testimonials' })">
               <strong>></strong> Testimonios
             </button>
           </li>
           <li>
-            <button @click="closeDropdownAndgoTo('#activity')">
+            <button @click="closeDropdownAndgoTo({ path: '/', hash: '#activity' })">
               <strong>></strong> Que hacemos
             </button>
           </li>
@@ -83,7 +83,7 @@ nav {
   position: fixed;
   width: 100%;
   /* top: 0; */
-  padding: 24px 5em;
+  padding: 24px 5%;
   img {
     width: 180px;
     cursor: pointer;

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Navbar v-if="$device.isDesktop" />
-    <NavbarMobile v-else />
+    <Navbar class="navbar-desktop" />
+    <NavbarMobile class="navbar-mobile" />
     <HomeContainer />
     <AboutUsContainer />
     <TestimonialsContainer />
@@ -30,10 +30,23 @@ export default Vue.extend({
     ActivityContainer,
     TestimonialsContainer,
     Footer,
-  }
+  },
 })
 </script>
 
 <style lang="scss">
 @import '@/assets/main.scss';
+
+.navbar-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .navbar-desktop {
+    display: none!important;
+  }
+  .navbar-mobile {
+    display: block;
+  }
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Navbar v-if="$device.isDesktop" />
-    <NavbarMobile v-else />
+    <Navbar class="navbar-desktop" />
+    <NavbarMobile class="navbar-mobile" />
 
     <main class="contact-main">
       <section class="contactForm_wrapper">
@@ -67,6 +67,19 @@ export default {
 <style lang='scss' scoped>
 @import '@/assets/main.scss';
 
+.navbar-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .navbar-desktop {
+    display: none!important;
+  }
+  .navbar-mobile {
+    display: block;
+  }
+}
+
 .contact-main {
   width: 80%;
   margin: 0 auto;
@@ -107,6 +120,7 @@ export default {
         margin-bottom: 8px;
       }
       h4 {
+        color: $blue;
         font-weight: 400;
         font-size: 17px;
       }
@@ -117,6 +131,8 @@ iframe {
   margin-bottom: -5px;
 }
 .copyright {
+  margin: 0;
+  padding: 0;
   width: 100%;
   background-color: $lightblue;
   padding: 28px;

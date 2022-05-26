@@ -5,7 +5,7 @@
         src="@/assets/images/logo-1.svg"
         alt=""
         class="nav_logo"
-        @click="goTo('#home')"
+        @click="goTo({ path: '/', hash: '#home' })"
       />
       <img
         src="@/assets/images/open-nav-button.svg"
@@ -106,6 +106,7 @@ export default {
   width: 100%;
   top: 0;
   z-index: 10;
+
   .navClose_header {
     background: $white;
     padding: 22px 5%;
@@ -120,12 +121,22 @@ export default {
   }
 
   .navOpen_wrapper {
+    -webkit-animation: slide-in-top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+      both;
+    animation: slide-in-top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
     background: $lightblue;
     position: absolute;
     width: 100%;
     height: 100vh;
     z-index: 11;
     top: 0;
+    &-close {
+      @extend .navOpen_wrapper;
+      -webkit-animation: slide-out-bottom 0.6s
+        cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
+      animation: slide-out-bottom 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+        both;
+    }
 
     .navOpen_header {
       display: flex;
@@ -168,9 +179,6 @@ export default {
         }
       }
     }
-  }
-  .navOpen_wrapper-close {
-    display: none;
   }
 }
 </style>

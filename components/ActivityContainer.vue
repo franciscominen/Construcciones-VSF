@@ -21,9 +21,6 @@
         mattis ac.
       </p>
     </section>
-    <button class="goToModels_button">
-      <p>NUESTROS MODELOS MAS VENDIDOS</p>
-    </button>
   </main>
 </template>
 
@@ -75,15 +72,6 @@ export default {
       min-width: 100px;
       object-fit: contain;
     }
-  }
-
-  .goToModels_button {
-    color: $white;
-    font-size: 24px;
-    font-weight: 400;
-    border: 2px solid $white;
-    border-radius: 4px;
-    padding: 18px 32px;
   }
 }
 

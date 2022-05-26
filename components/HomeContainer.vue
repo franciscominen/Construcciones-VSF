@@ -14,27 +14,26 @@
       ></lottie-player>
     </section>
     <section class="home_footerWrapper">
-      <SocialMediaLinks :classColor="`socialMedia_blue`" v-if='$device.isDesktop'/>
-      <NuxtLink to="#about" class="goToAbout_button">
+      <SocialMediaLinks
+        :classColor="`socialMedia_blue`"
+        class="socialMedia-links"
+      />
+      <NuxtLink :to="{ path: '/', hash: '#about' }" class="goToAbout_button">
         <h3>Descubri sobre nosotros</h3>
         <img src="@/assets/images/icons/down-arrow.svg" alt="" />
       </NuxtLink>
-      <img
-        src="@/assets/images/icons/msg-modal-icon.svg"
-        alt=""
-        style="width: 50px"
-        class="img-consult"
-      />
+      <ConsultModal />
     </section>
   </main>
 </template>
 
 <script lang='ts'>
 import SocialMediaLinks from '@/components/SocialMediaLinks.vue'
+import ConsultModal from './ConsultModal.vue'
 
 export default {
   name: 'HomeContainer',
-  components: { SocialMediaLinks },
+  components: { SocialMediaLinks, ConsultModal },
 }
 </script>
 
@@ -119,6 +118,9 @@ export default {
 
     .home_footerWrapper {
       justify-content: center;
+      .socialMedia-links {
+        display: none;
+      }
       .img-consult {
         display: none;
       }

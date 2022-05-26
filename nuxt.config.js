@@ -39,7 +39,6 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     '@nuxtjs/style-resources',
-    '@nuxtjs/device',
   ],
   device: {
     refreshOnResize: true,
@@ -51,7 +50,6 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/firebase',
-    '@nuxtjs/device',
   ],
 
   firebase: {

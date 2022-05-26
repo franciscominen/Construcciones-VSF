@@ -12,11 +12,7 @@
           nosotros lo construimos.
         </p>
         <SocialMediaLinks
-          :classColor="[
-            $device.isDesktop
-              ? 'socialMedia_lightblue-mobile'
-              : 'socialMedia_lightblue-mobile',
-          ]"
+          :classColor="'socialMedia_lightblue-mobile'"
         />
       </article>
       <article class="footer_infoWrapper">

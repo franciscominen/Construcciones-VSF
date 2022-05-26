@@ -107,9 +107,6 @@ export default {
       }
     },
   },
-  mounted() {
-    console.log(this.isDisabled)
-  },
 }
 </script>
 
@@ -131,6 +128,7 @@ export default {
         background: transparent;
         border: none;
         border-bottom: 1px solid $lightblue;
+        border-radius: 0;
         font-family: $textFont;
         font-size: 18px;
         padding: 8px 0;
@@ -153,6 +151,7 @@ export default {
       background: transparent;
       border: none;
       border-bottom: 1px solid $lightblue;
+      border-radius: 0;
       font-family: $textFont;
       font-size: 18px;
       padding: 8px 0;
@@ -174,6 +173,7 @@ export default {
       color: $white;
       background: $green;
       font-size: 18px;
+      font-weight: 400;
       padding: 16px;
       border: 1px solid $green;
       border-radius: 4px;
