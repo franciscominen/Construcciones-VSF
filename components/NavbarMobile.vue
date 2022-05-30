@@ -121,9 +121,8 @@ export default {
   }
 
   .navOpen_wrapper {
-    -webkit-animation: slide-in-top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
-      both;
-    animation: slide-in-top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    transform: translateY(0);
+    transition: .6s;
     background: $lightblue;
     position: absolute;
     width: 100%;
@@ -132,10 +131,8 @@ export default {
     top: 0;
     &-close {
       @extend .navOpen_wrapper;
-      -webkit-animation: slide-out-bottom 0.6s
-        cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
-      animation: slide-out-bottom 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19)
-        both;
+      transform: translateY(-100vh);
+      transition: .6s cubic-bezier(0.215, 0.61, 0.355, 1) ;
     }
 
     .navOpen_header {
@@ -161,11 +158,11 @@ export default {
           align-items: center;
           width: 100%;
           img {
-            width: 72px;
+            width: 58px;
           }
           h4 {
             color: $white;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 300;
           }
         }

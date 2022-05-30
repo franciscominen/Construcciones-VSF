@@ -99,6 +99,8 @@ export default {
             location: this.location,
             phone: this.phone,
             consultText: this.consultText,
+            answered: false,
+            date: new Date().toString(),
           })
         this.isSendSuccess = true
         this.isLoading = false
@@ -114,6 +116,7 @@ export default {
 @import '@/assets/main.scss';
 .contact-form {
   margin: 18px 0;
+  height: 18em;
   form {
     display: flex;
     flex-direction: column;
@@ -213,6 +216,7 @@ export default {
 
 @media (max-width: 1024px) {
   .contact-form {
+    height: auto;
     form {
       article {
         flex-direction: column;

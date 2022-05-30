@@ -23,6 +23,7 @@
       <div class="consult">
         <h3>Consulta:</h3>
         <p>{{ consult.consultText }}</p>
+        <p class="consultDate">Enviada el: {{ dateReadeble }}</p>
       </div>
       <div class="buttons_container">
         <button @click="setAnswered(consult.id)" v-if="showConsults">
@@ -38,20 +39,25 @@
   </article>
 </template>
 
-<script >
+<script>
 import Spinner from '@/components/Spinner.vue'
 export default {
   name: 'ConsultCard',
   props: {
-    consult: Object,
-    showConsults: Boolean,
+    consult: { type: Object },
+    showConsults: { type: Boolean },
   },
+  components: { Spinner },
   data() {
     return {
       isLoading: false,
     }
   },
-  components: { Spinner },
+  computed: {
+    dateReadeble() {
+      return this.consult.date.split('G')[0]
+    },
+  },
   methods: {
     async setAnswered(id) {
       try {
@@ -135,6 +141,11 @@ export default {
         font-size: 16px;
         color: $blue;
         font-weight: 600;
+      }
+      .consultDate {
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 22px;
       }
     }
     .buttons_container {

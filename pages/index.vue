@@ -36,17 +36,4 @@ export default Vue.extend({
 
 <style lang="scss">
 @import '@/assets/main.scss';
-
-.navbar-mobile {
-  display: none;
-}
-
-@media (max-width: 1024px) {
-  .navbar-desktop {
-    display: none!important;
-  }
-  .navbar-mobile {
-    display: block;
-  }
-}
 </style>

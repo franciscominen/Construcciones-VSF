@@ -153,13 +153,18 @@ export default {
   right: 5%;
   bottom: 5%;
   z-index: 10;
-  -webkit-animation: scale-in-br 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: scale-in-br 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  transition: .5s ease;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
   &-hidden {
     @extend .modal_wrapper;
-    -webkit-animation: scale-out-br 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-      both;
-    animation: scale-out-br 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    transition: .5s ease;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
   }
 
   img {
@@ -252,26 +257,27 @@ export default {
   }
 
   .consultSuccess_wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin-top: 72px;
-      gap: 8px;
-      img {
-          width: 62px;
-          margin: 0 auto;
-          filter: brightness(0) saturate(100%) invert(74%) sepia(11%) saturate(1948%) hue-rotate(65deg) brightness(101%) contrast(97%);
-      }
-      h3 {
-          color: $green;
-          margin-bottom: 8px;
-      }
-      p {
-          color: $lightblue;
-          width: 16em;
-      }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 72px;
+    gap: 8px;
+    img {
+      width: 62px;
+      margin: 0 auto;
+      filter: brightness(0) saturate(100%) invert(74%) sepia(11%)
+        saturate(1948%) hue-rotate(65deg) brightness(101%) contrast(97%);
+    }
+    h3 {
+      color: $green;
+      margin-bottom: 8px;
+    }
+    p {
+      color: $lightblue;
+      width: 16em;
+    }
   }
 }
 

@@ -69,7 +69,7 @@ export default {
 <style lang='scss'>
 @import '@/assets/main.scss';
 footer {
-  padding: 4em 10% 2em 10%;
+  padding: 4em 10% 2em 10%!important;
   .footer_mainWrapper {
     display: flex;
     justify-content: space-between;
