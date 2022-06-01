@@ -8,30 +8,18 @@
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident
         consequuntur eius dolores sapiente doloribus commodi quod veritatis ipsa
-        quam? Est optio nam error quod, labore a consequuntur similique culpa.
+        quam? Tambien, puede
+        <NuxtLink to="/contact"
+          >consultar por un modelo perzonalizado.</NuxtLink
+        >
       </p>
-      <section>
-        <ModelCard
-          :name="`Modelo 1234`"
-          :cantDorm="`3`"
-          :cantBath="`2`"
-          :mts="`123`"
-          :car="true"
-        />
-        <ModelCard
-          :name="`Modelo 4567`"
-          :cantDorm="`2`"
-          :cantBath="`1`"
-          :mts="`84`"
-          :car="false"
-        />
-        <ModelCard
-          :name="`Modelo 7890`"
-          :cantDorm="`1`"
-          :cantBath="`1`"
-          :mts="`72`"
-          :car="true"
-        />
+      <Spinner
+        v-if="isLoading"
+        style="width: 60px; height: 60px; margin: 0 auto; position: relative; top: 8em;"
+        >Cargando..</Spinner
+      >
+      <section class="cards_container" v-else>
+        <ModelCard v-for="model in models" :key="model.name" :model="model" />
       </section>
     </main>
 
@@ -45,10 +33,33 @@ import NavbarMobile from '@/components/NavbarMobile.vue'
 import ConsultModal from '@/components/ConsultModal.vue'
 import Footer from '@/components/Footer.vue'
 import ModelCard from '~/components/models/ModelCard.vue'
+import Spinner from '~/components/Spinner.vue'
 
 export default {
   name: 'Models',
-  components: { Footer, Navbar, NavbarMobile, ConsultModal, ModelCard },
+  components: {
+    Footer,
+    Navbar,
+    NavbarMobile,
+    ConsultModal,
+    ModelCard,
+    Spinner,
+  },
+  data() {
+    return {
+      isLoading: false,
+    }
+  },
+  computed: {
+    models() {
+      return this.$store.state.models
+    },
+  },
+  async fetch() {
+    this.isLoading = true
+    await this.$store.dispatch('getModels')
+    this.isLoading = false
+  },
 }
 </script>
 
@@ -60,7 +71,12 @@ div {
   background-size: contain;
 
   .models_mainContainer {
-    padding: 8em 7% 4em 7%;
+    padding: 7em 0 4em 0;
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 75em;
+    width: 100%;
+    object-fit: cover;
     h1 {
       color: $lightblue;
       font-size: 48px;
@@ -69,30 +85,40 @@ div {
     p {
       color: $lightblue;
       font-size: 18px;
-      width: 70%;
+      font-weight: 400;
+      width: 80%;
       margin-bottom: 32px;
+      a {
+        color: $green;
+        transition: 0.2s;
+        &:hover {
+          transition: 0.2s;
+          text-decoration: underline;
+        }
+      }
     }
-    section {
+    .cards_container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
     }
   }
 }
-@media (max-width: 1375px) {
+@media (max-width: 900px) {
   div {
     background-size: 250%;
     .models_mainContainer {
-      padding: 7em 7% 4em 7%;
+      padding: 6em 22px 2em 22px;
       h1 {
-        font-size: 36px;
+        font-size: 32px;
       }
       p {
-        width: auto;
+        width: 100%;
       }
-      section {
-       flex-direction: column;
-       gap: 28px;
+      .cards_container {
+        gap: 32px;
       }
     }
   }

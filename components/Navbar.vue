@@ -14,17 +14,25 @@
           ]"
         >
           <li>
-            <button @click="closeDropdownAndgoTo({ path: '/', hash: '#about' })">
+            <button
+              @click="closeDropdownAndgoTo({ path: '/', hash: '#about' })"
+            >
               <strong>></strong> Nosotros
             </button>
           </li>
           <li>
-            <button @click="closeDropdownAndgoTo({ path: '/', hash: '#testimonials' })">
+            <button
+              @click="
+                closeDropdownAndgoTo({ path: '/', hash: '#testimonials' })
+              "
+            >
               <strong>></strong> Testimonios
             </button>
           </li>
           <li>
-            <button @click="closeDropdownAndgoTo({ path: '/', hash: '#activity' })">
+            <button
+              @click="closeDropdownAndgoTo({ path: '/', hash: '#activity' })"
+            >
               <strong>></strong> Que hacemos
             </button>
           </li>
@@ -99,9 +107,18 @@ nav {
         font-size: 18px;
         font-weight: 500;
         color: $lightblue;
-        displafg .admin_icon {
+        transition: 0.2s;
+        .admin_icon {
+          transition: 0.2s;
           max-width: 26px;
           margin: auto 0;
+        }
+        &:hover {
+          color: $green;
+          .admin_icon {
+            filter: brightness(0) saturate(100%) invert(74%) sepia(11%)
+              saturate(1948%) hue-rotate(65deg) brightness(101%) contrast(97%);
+          }
         }
       }
 
@@ -109,19 +126,19 @@ nav {
         font-size: 18px;
         font-weight: 500;
         color: $lightblue;
+        transition: 0.2s;
+        &:hover {
+          color: $green;
+        }
       }
       .contact_navLink {
         border: 1px solid $lightblue;
         padding: 8px 18px;
         border-radius: 5px;
-      }
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .admin_icon {
-          max-width: 26px;
+        transition: 0.2s;
+        &:hover {
+          border: 1px solid $green;
+          color: $green;
         }
       }
     }
@@ -132,21 +149,33 @@ nav {
     align-items: flex-start;
     justify-content: flex-start;
     position: absolute;
-
     gap: 16px;
     margin-top: 18px;
     background: $white;
     padding: 32px 22px 22px 22px;
     margin: 0 -24px;
     border-radius: 6px;
+    transition: 0.5s ease;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    &--disabled {
+      @extend .navbar_dropdown;
+      transition: 0.5s ease;
+      -webkit-transform: scaleY(0);
+      transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+    }
     li {
       color: $lightblue;
       font-family: $textFont;
       font-size: 16px;
     }
   }
-  .navbar_dropdown--disabled {
-    display: none;
-  }
+}
+.nuxt-link-exact-active {
+  color: $blue;
 }
 </style>

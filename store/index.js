@@ -27,6 +27,21 @@ const actions = {
         } catch (err) {
             console.error(err);
         }
+    },
+
+    async getModels({ commit }) {
+        try {
+            let models = [];
+            const fsDb = await this.$fire.firestore.collection("Models").get();
+            fsDb.forEach(model => {
+                models.push(model.data());
+            });
+
+            commit('GET_MODELS', models)
+
+        } catch (err) {
+            console.error(err);
+        }
     }
 
 }
@@ -37,12 +52,16 @@ const mutations = {
     },
     SET_CONSULTS(state, consults) {
         state.consults = consults
+    },
+    GET_MODELS(state, models) {
+        state.models = models
     }
 }
 
 const state = () => ({
     user: null,
     consults: [],
+    models: []
 })
 
 const getters = {

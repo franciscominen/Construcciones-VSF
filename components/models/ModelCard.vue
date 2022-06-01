@@ -1,26 +1,40 @@
 <template>
   <div class="model_card">
-    <img src="@/assets/images/house.jpg" alt="" />
+    <img src="@/assets/images/house.jpg" alt="" class="model_img" />
 
     <article>
-      <h1>{{ name }}</h1>
+      <h1>Modelo {{ model.name }}</h1>
       <ul>
-        <li><img src="@/assets/images/icons/mts.svg" alt="" />{{ mts }}</li>
         <li>
-          <img src="@/assets/images/icons/bed.svg" alt="" />{{ cantDorm }}
+          <img src="@/assets/images/icons/mts.svg" alt="" />
         </li>
         <li>
-          <img src="@/assets/images/icons/bath.svg" alt="" />{{ cantBath }}
+          <img src="@/assets/images/icons/bed.svg" alt="" />
         </li>
         <li>
-          <img src="@/assets/images/icons/living.svg" alt="" />{{ cantBath }}
+          <img src="@/assets/images/icons/bath.svg" alt="" />
         </li>
         <li>
-          <img src="@/assets/images/icons/kitchen.svg" alt="" />{{ cantBath }}
+          <img src="@/assets/images/icons/kitchen.svg" alt="" />
         </li>
-        <li v-if="car"><img src="@/assets/images/icons/car.svg" alt="" /></li>
+        <li v-if="model.living">
+          <img src="@/assets/images/icons/living.svg" alt="" />
+        </li>
+        <li v-if="model.comedor">
+          <img src="@/assets/images/icons/comedor.svg" alt="" />
+        </li>
+
+        <li v-if="model.car">
+          <img src="@/assets/images/icons/car.svg" alt="" />
+        </li>
       </ul>
-      <button>Conocer Modelo</button>
+      <NuxtLink
+        :to="{
+          name: 'models-model',
+          params: { model: this.model.name },
+        }"
+        >Conocer Modelo</NuxtLink
+      >
     </article>
   </div>
 </template>
@@ -29,11 +43,7 @@
 export default {
   name: 'ModelCard',
   props: {
-    name: '',
-    cantDorm: '',
-    cantBath: '',
-    mts: '',
-    car: false,
+    model: Object,
   },
 }
 </script>
@@ -41,47 +51,82 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
 .model_card {
-  border: 1px solid $lightblue;
-  border-radius: 6px 6px 50px 6px;
+  box-sizing: border-box;
+  border-radius: 6px 6px 6px 60px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  background: $white;
-  width: 385px;
-  img {
-    max-width: 385px;
+  align-items: center;
+  background: $lightblue;
+  width: auto;
+  height: auto;
+  .model_img {
+    max-width: 380px;
+    min-width: 100px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 1px solid $white;
   }
   article {
-    padding: 18px;
-    color: $lightblue;
+    padding: 16px 0 0 0;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     h1 {
       font-size: 28px;
-      font-weight: lighter;
-      margin-bottom: 8px;
+      font-weight: bolder;
+      margin-bottom: 16px;
     }
     ul {
       display: flex;
-      gap: 16px;
+      justify-content: space-between;
+      gap: 5px;
       font-family: $textFont;
       font-size: 16px;
-      font-weight: bold;
-      padding-bottom: 32px;
-      img {
-        margin-right: 8px;
+      margin-bottom: 2.5em;
+      li {
+        background: $blue;
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        transition: 0.2s;
+        &:hover {
+          background: $green;
+        }
+        img {
+          width: 38px;
+        }
       }
     }
-    button {
-        font-size: 18px;
-        font-weight: bold;
-        color: $green;
-        padding: 12px 20px;
-        border: 1px solid $green;
-        border-radius: 4px;
-        transition: .2s;
-        &:hover {
-            color: $white;
-            background: $green;
-        }
+    a {
+      text-align: center;
+      border-top: 1px solid $white;
+      border-radius: 0 0 6px 60px;
+      padding: 20px 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: $white;
+      width: 100%;
+      transition: 0.2s;
+      &:hover {
+        background: $green;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .model_card {
+    article {
+      ul {
+        flex-wrap: wrap;
+        padding: 0 12px;
+      }
     }
   }
 }

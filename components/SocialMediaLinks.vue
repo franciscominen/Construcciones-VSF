@@ -44,8 +44,18 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: 0.2s;
       img {
+        transition: 0.2s;
         max-width: 32px;
+      }
+      &:hover {
+        border: 1px solid $green;
+        img {
+          max-width: 32px;
+          filter: brightness(0) saturate(100%) invert(74%) sepia(11%)
+            saturate(1948%) hue-rotate(65deg) brightness(101%) contrast(97%);
+        }
       }
     }
   }
@@ -65,8 +75,17 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: 0.2s;
       img {
+        transition: 0.2s;
         filter: brightness(2.2);
+      }
+      &:hover {
+        border: 1px solid $blue;
+        img {
+          max-width: 32px;
+          filter: none;
+        }
       }
     }
   }
@@ -109,8 +128,16 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: 0.2s;
       img {
+        transition: 0.2s;
         filter: brightness(2.2);
+      }
+      &:hover {
+        border: 1px solid $blue;
+        img {
+          filter: none;
+        }
       }
     }
   }

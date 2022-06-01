@@ -54,11 +54,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-
     min-height: 100px;
     max-height: 100em;
     object-fit: contain;
     h1 {
+      -webkit-animation: fade-in-fwd 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) 1s
+        both;
+      animation: fade-in-fwd 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
       font-size: 68px;
       font-weight: 900;
       line-height: 1.05;
@@ -72,6 +74,10 @@ export default {
       min-width: 200px;
       object-fit: contain;
       z-index: 1;
+      -webkit-animation: slide-in-right 0.9s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+      animation: slide-in-right 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+        both;
     }
   }
 
@@ -88,14 +94,26 @@ export default {
     .goToAbout_button {
       position: relative;
       right: 2.5em;
+      transition: 0.2s;
       h3 {
         color: $blue;
         font-size: 20px;
         font-weight: 500;
         margin-bottom: 4px;
+        transition: 0.2s;
       }
       img {
+        transition: 0.2s;
         max-width: 220px;
+      }
+      &:hover {
+        h3 {
+          color: $green;
+        }
+        img {
+          filter: brightness(0) saturate(100%) invert(74%) sepia(11%)
+            saturate(1948%) hue-rotate(65deg) brightness(101%) contrast(97%);
+        }
       }
     }
   }
