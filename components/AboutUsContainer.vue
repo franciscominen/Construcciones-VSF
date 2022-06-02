@@ -1,14 +1,16 @@
 <template>
   <main class="aboutUs_mainWrapper" id="about">
-    <h1>Quienes somos?</h1>
+    <h1 data-aos="zoom-in" data-aos-duration="800">Quienes somos?</h1>
     <section class="aboutUs_infoWrapper">
-      <p>
+      <p data-aos="fade-right" data-aos-duration="800">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi id
         nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam mattis
         ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
         id nisl tincidunt quam mattis ac.
       </p>
       <lottie-player
+        data-aos-duration="800"
+        data-aos="fade-left"
         autoplay
         loop
         src="https://assets3.lottiefiles.com/packages/lf20_nm4ouwfb.json"
@@ -21,13 +23,16 @@
 </template>
 
 <script>
+import aosMixin from '@/mixins/aos'
+
 export default {
   name: 'AboutUsContainer',
+  mixins: [aosMixin],
 }
 </script>
 
 <style lang='scss' scoped>
- @import '@/assets/main.scss';
+@import '@/assets/main.scss';
 
 .aboutUs_mainWrapper {
   min-height: auto;
@@ -102,5 +107,5 @@ export default {
       }
     }
   }
-} 
+}
 </style>

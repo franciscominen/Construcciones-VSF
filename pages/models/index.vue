@@ -4,8 +4,8 @@
     <NavbarMobile class="navbar-mobile" />
     <ConsultModal />
     <main class="models_mainContainer">
-      <h1>Nuestros Principales Modelos</h1>
-      <p>
+      <h1 data-aos="fade-right" data-aos-duration="500">Nuestros Principales Modelos</h1>
+      <p data-aos="fade-right" data-aos-duration="500">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident
         consequuntur eius dolores sapiente doloribus commodi quod veritatis ipsa
         quam? Tambien, puede
@@ -15,11 +15,17 @@
       </p>
       <Spinner
         v-if="isLoading"
-        style="width: 60px; height: 60px; margin: 0 auto; position: relative; top: 8em;"
+        style="
+          width: 60px;
+          height: 60px;
+          margin: 0 auto;
+          position: relative;
+          top: 8em;
+        "
         >Cargando..</Spinner
       >
       <section class="cards_container" v-else>
-        <ModelCard v-for="model in models" :key="model.name" :model="model" />
+        <ModelCard v-for="model in models" :key="model.name" :model="model" data-aos="zoom-in" data-aos-duration="700"/>
       </section>
     </main>
 
@@ -34,9 +40,11 @@ import ConsultModal from '@/components/ConsultModal.vue'
 import Footer from '@/components/Footer.vue'
 import ModelCard from '~/components/models/ModelCard.vue'
 import Spinner from '~/components/Spinner.vue'
+import aosMixin from '@/mixins/aos'
 
 export default {
   name: 'Models',
+  mixins: [aosMixin],
   components: {
     Footer,
     Navbar,

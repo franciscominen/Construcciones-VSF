@@ -4,7 +4,7 @@
     <NavbarMobile class="navbar-mobile" />
 
     <main class="contact-main">
-      <section class="contactForm_wrapper">
+      <section class="contactForm_wrapper" data-aos='fade-in' data-aos-duration="700" data-aos-delay="300" >
         <h1>Soñas con tener tu propio hogar?</h1>
         <p>
           Completa el formulario y nos contactaremos dentro de las las proximas
@@ -13,7 +13,7 @@
         <ContactForm />
       </section>
 
-      <ul class="contactData_wrapper">
+      <ul class="contactData_wrapper" data-aos='fade-left' data-aos-duration="700" >
         <li>
           <p>Telefonos:</p>
           <h4>+54 9 (342) 433 1234</h4>
@@ -54,9 +54,11 @@ import Navbar from '@/components/Navbar.vue'
 import NavbarMobile from '@/components/NavbarMobile.vue'
 import ContactForm from '@/components/ContactForm.vue'
 import SocialMediaLinks from '@/components/SocialMediaLinks.vue'
+import aosMixin from '@/mixins/aos'
 
 export default {
   name: 'Contact',
+  mixins: [aosMixin],
   components: { Navbar, NavbarMobile, ContactForm, SocialMediaLinks },
   data() {
     return {}
@@ -73,7 +75,7 @@ export default {
 
 @media (max-width: 1024px) {
   .navbar-desktop {
-    display: none!important;
+    display: none !important;
   }
   .navbar-mobile {
     display: block;

@@ -1,0 +1,10 @@
+{
+  "name": "VSF-Construcciones-Web",
+  "short_name": "VSF-Construcciones-Web",
+  "description": "## Build Setup",
+  "icons": [],
+  "start_url": "/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "lang": "en"
+}

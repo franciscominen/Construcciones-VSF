@@ -3,12 +3,103 @@ export default {
   head: {
     title: 'Tener tu hogar es posible | Viviendas Santa Fe',
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: `Play "Which character are you?" Quiz, and share which Peanuts Experience character you are!`,
+      },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content: `peanuts, quiz, experience, snoopy, charlie, brown`,
+      },
+      {
+        hid: "author",
+        name: "author",
+        content: `Peanuts`,
+      },
+      {
+        hid: "image",
+        name: "image",
+        content:
+          "https://firebasestorage.googleapis.com/v0/b/lacoste-ecommerce.appspot.com/o/default.png?alt=media&token=be8d9c1d-d991-408e-9f13-dc2b390d0a43",
+      },
+      { name: "format-detection", content: "telephone=no" },
+      // Twitter
+      // Test on: https://cards-dev.twitter.com/validator
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        hid: "twitter:site",
+        name: "twitter:site",
+        content: "@searchforsnoopy",
+      },
+      {
+        hid: "twitter:url",
+        name: "twitter:url",
+        /* content: `${basePath}`, */
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "Peanuts Quiz | Which character are you?",
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: `Play "Which character are you?" Quiz, and share which Peanuts Experience character you are!`,
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: "https://nuxtjs.org/nuxt-card.png",
+      },
+
+      // Open Graph
+      // Test on: https://developers.facebook.com/tools/debug/
+      {
+        hid: "og:site_name",
+        property: "og:site_name",
+        content: "SearchForSnoopy",
+      },
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+        hid: "og:url",
+        property: "og:url",
+       /*  content: `${basePath}`, */
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Peanuts Quiz | Which character are you?",
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: `Play "Which character are you?" Quiz, and share which Peanuts Experience character you are!`,
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "https://nuxtjs.org/nuxt-card.png",
+      },
+      {
+        hid: "og:image:secure_url",
+        property: "og:image:secure_url",
+        /* content: `${basePath}`, */
+      },
+      {
+        hid: "og:image:alt",
+        property: "og:image:alt",
+        content: "Peanuts Quiz | Which character are you?",
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
   },
   target: 'static',
   server: {

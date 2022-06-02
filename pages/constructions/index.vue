@@ -5,31 +5,42 @@
       <NavbarMobile class="navbar-mobile" />
       <ConsultModal />
       <section class="constructions_mainWrapper" v-if="showCards">
-        <h1>Procesos Constructivos</h1>
-        <p>
+        <h1 data-aos="fade-down" data-aos-duration="700">
+          Procesos Constructivos
+        </h1>
+        <p data-aos="fade-down" data-aos-duration="700">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
           id nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam
           mattis ac.
         </p>
-        <section class="constructions_cardsWrapper">
-          <article class="constructions_card constructions_card-steel">
+        <section class="constructions_cardsWrapper" data-aos='fade-up' data-aos-duration="700" data-aos-delay="500">
+          <div class="constructions_card constructions_card-steel">
             <div>
-              <h2>Steel Frame</h2>
-              <button @click="onShowSteelFrame">Que es?</button>
+              <img src="@/assets/images/icons/steel.svg" alt="" />
+              <span>
+                <h2>Steel Frame</h2>
+                <button @click="onShowSteelFrame">Que es?</button>
+              </span>
             </div>
-          </article>
-          <article class="constructions_card constructions_card-wood">
+          </div>
+          <div class="constructions_card constructions_card-wood">
             <div>
-              <h2>Wood Frame</h2>
-              <button @click="onShowWoodFrame">Que es?</button>
+              <img src="@/assets/images/icons/wood.svg" alt="" />
+              <span>
+                <h2>Wood Frame</h2>
+                <button @click="onShowWoodFrame">Que es?</button></span
+              >
             </div>
-          </article>
-          <article class="constructions_card constructions_card-hibrida">
+          </div>
+          <div class="constructions_card constructions_card-hibrida">
             <div>
-              <h2>Hibrida</h2>
-              <button @click="onShowHibrido">Que es?</button>
+              <img src="@/assets/images/icons/hibrid.svg" alt="" />
+              <span>
+                <h2>Hibrida</h2>
+                <button @click="onShowHibrido">Que es?</button></span
+              >
             </div>
-          </article>
+          </div>
         </section>
       </section>
       <SteelFrameInfo v-if="showSteelFrame" :onGoBackSteel="onGoBackSteel" />
@@ -48,9 +59,11 @@ import WoodFrameInfo from '@/components/contructions/WoodFrameInfo.vue'
 import HibridoInfo from '@/components/contructions/HibridoInfo.vue'
 import Footer from '@/components/Footer.vue'
 import ConsultModal from '@/components/ConsultModal.vue'
+import aosMixin from '@/mixins/aos'
 
 export default {
   name: 'Constructions',
+  mixins: [aosMixin],
   components: {
     Navbar,
     NavbarMobile,
@@ -136,13 +149,14 @@ export default {
 
       .constructions_card {
         border: 2px solid $white;
-        border-radius: 60px 0 60px 0;
+        border-radius: 60px 6px 6px 6px;
         transition: 0.2s;
         width: 20em;
         height: 23em;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+
         div {
           opacity: 0;
           transition: 0.3s;
@@ -152,26 +166,34 @@ export default {
             rgba(93, 134, 239, 0) 100%
           );
           display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-start;
-          padding: 24px;
+          align-items: flex-end;
+          padding: 20px 20px 30px 20px;
           height: 20em;
-          border-radius: 60px 0 60px 0;
-          h2 {
-            font-size: 38px;
-            margin-bottom: 16px;
+          border-radius: 4px 4px 4px 4px;
+          img {
+            margin-right: 16px;
           }
-          button {
-            color: $white;
-            border: 1px solid $green;
-            border-radius: 4px;
-            font-size: 18px;
-            font-weight: 600;
-            padding: 8px 16px;
-            transition: 0.2s;
-            &:hover {
-              background: $green;
+          span {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            h2 {
+              font-size: 35px;
+              margin-bottom: 8px;
+            }
+            button {
+              width: 100%;
+              color: $white;
+              border: 1px solid $green;
+              border-radius: 4px;
+              font-size: 18px;
+              font-weight: 600;
+              padding: 8px 16px;
+              transition: 0.2s;
+              &:hover {
+                background: $green;
+              }
             }
           }
         }

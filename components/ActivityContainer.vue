@@ -1,6 +1,6 @@
 <template>
   <main class="activity_mainWrapper" id="activity">
-    <h1>A que nos dedicamos?</h1>
+    <h1 data-aos="zoom-in">A que nos dedicamos?</h1>
     <section class="activity_infoWrapper">
       <lottie-player
         autoplay
@@ -9,8 +9,9 @@
         src="https://assets4.lottiefiles.com/packages/lf20_griqijxi.json"
         speed="1"
         debug
+        data-aos="fade-right"
       ></lottie-player>
-      <p>
+      <p data-aos="fade-left">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi id
         nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam mattis
         ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
@@ -25,8 +26,11 @@
 </template>
 
 <script>
+import aosMixin from '@/mixins/aos'
+
 export default {
   name: 'ActivityContainer',
+  mixins: [aosMixin],
 }
 </script>
 

@@ -4,7 +4,7 @@
     <NavbarMobile class="navbar-mobile" />
     <ConsultModal />
     <section class="modelDescript_container">
-      <section class="carousel_wrapper">
+      <section class="carousel_wrapper" data-aos='fade-in' data-aos-duration="900" >
         <ModelImagesCarousel :model="model" />
         <article>
           <h1>Modelo {{ model.name }}</h1>
@@ -40,7 +40,7 @@
           </ul>
         </article>
       </section>
-      <p class="model_description">
+      <p class="model_description" data-aos='fade-up' data-aos-duration="700" >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi id
         nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam mattis
         ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
@@ -63,9 +63,11 @@ import NavbarMobile from '@/components/NavbarMobile.vue'
 import ConsultModal from '@/components/ConsultModal.vue'
 import Footer from '@/components/Footer.vue'
 import ModelImagesCarousel from '~/components/models/ModelImagesCarousel.vue'
+import aosMixin from '@/mixins/aos'
 
 export default {
   name: 'ModelDescription',
+  mixins: [aosMixin],
   components: {
     Footer,
     Navbar,

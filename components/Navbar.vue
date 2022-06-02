@@ -40,7 +40,7 @@
       </li>
       <li><NuxtLink to="/constructions">Construcciones</NuxtLink></li>
       <li><NuxtLink to="/models">Modelos</NuxtLink></li>
-      <li><NuxtLink to="/">Equipo</NuxtLink></li>
+      <li><NuxtLink to="/team">Equipo</NuxtLink></li>
       <li>
         <NuxtLink to="/contact" class="contact_navLink">Contacto</NuxtLink>
       </li>

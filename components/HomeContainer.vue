@@ -3,8 +3,12 @@
   <main class="home_mainWrapper" id="home">
     <figure></figure>
     <section class="home_titleSection">
-      <h1>Construcción <br />sin <span>estrés</span>.</h1>
+      <h1 data-aos="fade-right" data-aos-duration="800">
+        Construcción <br />sin <span>estrés</span>.
+      </h1>
       <lottie-player
+        data-aos="zoom-out"
+        data-aos-duration="800"
         autoplay
         loop
         class="animation_home"
@@ -30,10 +34,12 @@
 <script lang='ts'>
 import SocialMediaLinks from '@/components/SocialMediaLinks.vue'
 import ConsultModal from './ConsultModal.vue'
+import aosMixin from '@/mixins/aos'
 
 export default {
   name: 'HomeContainer',
   components: { SocialMediaLinks, ConsultModal },
+  mixins: [aosMixin],
 }
 </script>
 
@@ -58,9 +64,6 @@ export default {
     max-height: 100em;
     object-fit: contain;
     h1 {
-      -webkit-animation: fade-in-fwd 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) 1s
-        both;
-      animation: fade-in-fwd 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
       font-size: 68px;
       font-weight: 900;
       line-height: 1.05;
@@ -73,11 +76,7 @@ export default {
       max-width: 750px;
       min-width: 200px;
       object-fit: contain;
-      z-index: 1;
-      -webkit-animation: slide-in-right 0.9s
-        cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
-      animation: slide-in-right 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
-        both;
+      z-index: 0;
     }
   }
 
@@ -85,6 +84,9 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    -webkit-animation: fade-in-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 1.4s
+      both;
+    animation: fade-in-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 1.4s both;
     .img-consult {
       position: sticky;
       bottom: 2em;

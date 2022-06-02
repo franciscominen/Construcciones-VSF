@@ -1,8 +1,12 @@
 <template>
   <!-- USE FIREBASE -->
   <main class="testimonials_mainWrapper" id="testimonials">
-    <h1>Clientes Felices</h1>
-    <hooper :settings="hooperSettings">
+    <h1 data-aos="zoom-in" data-aos-duration="800">Clientes Felices</h1>
+    <hooper
+      :settings="hooperSettings"
+      data-aos="fade-in"
+      data-aos-duration="800"
+    >
       <slide>
         <div class="testimonials_familyCard">
           <img src="@/assets/images/family.svg" alt="" />
@@ -51,9 +55,11 @@
 <script>
 import { Hooper, Slide, Navigation as HooperNavigation } from 'hooper'
 import 'hooper/dist/hooper.css'
+import aosMixin from '@/mixins/aos'
+
 export default {
   name: 'TestimonialsContainer',
-
+  mixins: [aosMixin],
   data() {
     return {
       hooperSettings: {

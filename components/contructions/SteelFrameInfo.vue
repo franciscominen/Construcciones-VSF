@@ -1,7 +1,7 @@
 <template>
   <div class="main_container">
     <section>
-      <div class="info_container">
+      <div class="info_container" data-aos="fade-right" data-aos-duration="500">
         <h1>Steel Frame</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
@@ -12,11 +12,23 @@
           adipiscing elit. In facilisi id nisl tincidunt.
         </p>
       </div>
-      <img src="@/assets/images/steel2.png" alt="" />
+      <img
+        src="@/assets/images/steel2.png"
+        alt=""
+        data-aos="fade-left"
+        data-aos-duration="500"
+        data-aos-delay="200"
+      />
     </section>
     <section>
-      <img src="@/assets/images/steel2.png" alt="" />
-      <p>
+      <img
+        src="@/assets/images/steel2.png"
+        alt=""
+        data-aos="fade-right"
+        data-aos-delay="400"
+        data-aos-duration="500"
+      />
+      <p data-aos="fade-left" data-aos-duration="500" data-aos-delay="600">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi id
         nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam mattis
         ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
@@ -34,8 +46,11 @@
 </template>
 
 <script lang='ts'>
+import aosMixin from '@/mixins/aos'
+
 export default {
   name: 'SteelFrameInfo',
+  mixins: [aosMixin],
   props: {
     onGoBackSteel: { type: Function },
   },
@@ -75,6 +90,7 @@ export default {
       h1 {
         font-size: 58px;
         margin-bottom: 22px;
+        color: $blue;
       }
       p {
         font-size: 18px;
