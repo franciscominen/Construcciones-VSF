@@ -83,6 +83,7 @@ export default {
 }
 
 .contact-main {
+  overflow-x: hidden;
   width: 80%;
   margin: 0 auto;
   display: flex;

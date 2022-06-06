@@ -107,6 +107,7 @@ export default {
   background: $white url('@/assets/images/home-bg.svg') no-repeat fixed center
     20em;
   background-size: contain;
+  overflow-x: hidden;
 }
 
 .modelDescript_container {

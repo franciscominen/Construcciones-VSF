@@ -6,6 +6,7 @@
     <AboutUsContainer />
     <TestimonialsContainer />
     <ActivityContainer />
+    <ConsultModal />
     <Footer />
   </div>
 </template>
@@ -19,6 +20,7 @@ import ActivityContainer from '@/components/ActivityContainer.vue'
 import TestimonialsContainer from '@/components/TestimonialsContainer.vue'
 import Footer from '@/components/Footer.vue'
 import NavbarMobile from '@/components/NavbarMobile.vue'
+import ConsultModal from '~/components/ConsultModal.vue'
 
 export default Vue.extend({
   name: 'IndexPage',
@@ -30,6 +32,7 @@ export default Vue.extend({
     ActivityContainer,
     TestimonialsContainer,
     Footer,
+    ConsultModal,
   },
 })
 </script>

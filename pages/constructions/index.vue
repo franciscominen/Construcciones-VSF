@@ -120,6 +120,7 @@ export default {
 @import '@/assets/main.scss';
 
 .main-container {
+  overflow-x: hidden;
   min-height: 100vh;
   background-color: $lightblue;
   background: $lightblue url('@/assets/images/lightblue-pattern.svg') no-repeat

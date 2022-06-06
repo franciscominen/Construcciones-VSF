@@ -3,12 +3,8 @@
   <main class="home_mainWrapper" id="home">
     <figure></figure>
     <section class="home_titleSection">
-      <h1 data-aos="fade-right" data-aos-duration="800">
-        Construcción <br />sin <span>estrés</span>.
-      </h1>
+      <h1>Construcción <br />sin <span>estrés</span>.</h1>
       <lottie-player
-        data-aos="zoom-out"
-        data-aos-duration="800"
         autoplay
         loop
         class="animation_home"
@@ -26,7 +22,7 @@
         <h3>Descubri sobre nosotros</h3>
         <img src="@/assets/images/icons/down-arrow.svg" alt="" />
       </NuxtLink>
-      <ConsultModal />
+      <figure></figure>
     </section>
   </main>
 </template>
@@ -47,6 +43,7 @@ export default {
 @import '@/assets/main.scss';
 
 .home_mainWrapper {
+  overflow-x: hidden;
   height: 100vh;
   background: $white url('@/assets/images/home-bg.svg') no-repeat fixed center
     20em;
@@ -64,6 +61,8 @@ export default {
     max-height: 100em;
     object-fit: contain;
     h1 {
+      -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
+      animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
       font-size: 68px;
       font-weight: 900;
       line-height: 1.05;
@@ -73,6 +72,9 @@ export default {
       }
     }
     .animation_home {
+      -webkit-animation: fade-in-fwd 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1.4s
+        both;
+      animation: fade-in-fwd 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1.4s both;
       max-width: 750px;
       min-width: 200px;
       object-fit: contain;
@@ -84,9 +86,9 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    -webkit-animation: fade-in-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 1.4s
-      both;
-    animation: fade-in-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 1.4s both;
+    -webkit-animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+      1.6s both;
+    animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 1.6s both;
     .img-consult {
       position: sticky;
       bottom: 2em;
@@ -123,6 +125,7 @@ export default {
 
 @media (max-width: 1024px) {
   .home_mainWrapper {
+    height: calc(100vh - 80px);
     background-size: 250%;
     justify-content: space-between;
     .home_titleSection {

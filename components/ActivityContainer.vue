@@ -38,6 +38,7 @@ export default {
 @import '@/assets/main.scss';
 
 .activity_mainWrapper {
+  overflow-x: hidden;
   min-height: 100vh;
   padding: 6em 6em 4em 6em;
   background: $lightblue url('@/assets/images/lightblue-pattern.svg') no-repeat
@@ -48,7 +49,7 @@ export default {
   align-items: center;
 
   h1 {
-    color: $white;
+    color: $green;
     font-size: 68px;
     font-weight: 900;
     margin-bottom: 15px;
@@ -89,8 +90,7 @@ export default {
     align-items: center;
 
     h1 {
-      color: $white;
-      font-size: 58px;
+      font-size: 48px;
       line-height: 1.3;
       font-weight: 900;
       margin-bottom: 15px;
@@ -108,7 +108,7 @@ export default {
 
       p {
         color: $white;
-        font-size: 32px;
+        font-size: 22px;
         font-weight: 100;
         line-height: 1.4;
         width: auto;

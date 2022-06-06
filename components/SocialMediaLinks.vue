@@ -1,10 +1,12 @@
 <template>
   <ul :class="classColor">
     <li>
-      <a href=""><img src="@/assets/images/icons/fb-icon.svg" alt="" /></a>
+      <a href="https://www.facebook.com/viviendassantafeSRL" target="_blank"
+        ><img src="@/assets/images/icons/fb-icon.svg" alt=""
+      /></a>
     </li>
     <li>
-      <a href=""
+      <a href="https://www.instagram.com/viviendassantafe/" target="_blank"
         ><img src="@/assets/images/icons/instagram-icon.svg" alt=""
       /></a>
     </li>

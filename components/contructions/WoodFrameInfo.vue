@@ -99,7 +99,8 @@ export default {
     }
     img {
       max-width: 480px;
-      object-fit: contain;
+      width: 100%;
+      object-fit: cover;
     }
     p {
       font-size: 18px;

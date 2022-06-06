@@ -11,9 +11,7 @@
           Vos lo imaginas,<br />
           nosotros lo construimos.
         </p>
-        <SocialMediaLinks
-          :classColor="'socialMedia_lightblue-mobile'"
-        />
+        <SocialMediaLinks :classColor="'socialMedia_lightblue-mobile'" />
       </article>
       <article class="footer_infoWrapper">
         <div class="footer_infoWrapper-container">
@@ -34,10 +32,20 @@
         <div class="footer_infoWrapper-container">
           <h3>Compania</h3>
           <ul class="footer_list">
-            <li><button @click="goTo({ path: '/', hash: '#testimonials' })">Testimonios</button></li>
-            <li><button @click="goTo({ path: '/', hash: '#about' })">Nosotros</button></li>
+            <li>
+              <button @click="goTo({ path: '/', hash: '#testimonials' })">
+                Testimonios
+              </button>
+            </li>
+            <li>
+              <button @click="goTo({ path: '/', hash: '#about' })">
+                Nosotros
+              </button>
+            </li>
             <li><button @click="goTo({ path: '/team' })">Team</button></li>
-            <li><button @click="goTo({ path: '/contact' })">Contacto</button></li>
+            <li>
+              <button @click="goTo({ path: '/contact' })">Contacto</button>
+            </li>
           </ul>
         </div>
       </article>
@@ -45,9 +53,16 @@
         <div class="footer_infoWrapper-container">
           <h3>Servicios</h3>
           <ul class="footer_list">
-            <li><button @click="goTo({ path: '/constructions' })">Construcciones</button></li>
+            <li>
+              <button @click="goTo({ path: '/constructions' })">
+                Construcciones
+              </button>
+            </li>
             <li><button @click="goTo({ path: '/models' })">Modelos</button></li>
           </ul>
+          <NuxtLink to="/admin" class="admin_button">
+            <img src="@/assets/images/icons/admin-icon.svg" alt=""
+          /></NuxtLink>
         </div>
       </article>
     </section>
@@ -68,14 +83,14 @@ export default {
       /* @ts-ignore */
       this.$router.replace(location)
     },
-  }
+  },
 }
 </script>
 
 <style lang='scss'>
 @import '@/assets/main.scss';
 footer {
-  padding: 4em 10% 2em 10%!important;
+  padding: 4em 10% 2em 10% !important;
   background: $white;
   .footer_mainWrapper {
     display: flex;
@@ -110,7 +125,7 @@ footer {
           button {
             font-size: 16px;
             color: $lightblue;
-            transition: .2s;
+            transition: 0.2s;
             &:hover {
               color: $green;
             }
@@ -118,6 +133,10 @@ footer {
         }
       }
     }
+  }
+  .admin_button {
+    position: relative;
+    top: 1em;
   }
   .copyright {
     padding-top: 2em;

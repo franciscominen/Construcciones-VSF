@@ -116,6 +116,7 @@ export default {
 <style lang='scss' scoped>
 @import '@/assets/main.scss';
 .main-team {
+  overflow-x: hidden;
   background: $lightblue url('@/assets/images/lightblue-pattern.svg') no-repeat
     fixed center 20em;
   background-size: contain;

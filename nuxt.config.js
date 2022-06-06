@@ -8,23 +8,23 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: `Play "Which character are you?" Quiz, and share which Peanuts Experience character you are!`,
+        content: `Con Viviendas Santa Fe, tener tu hogar es posible.`,
       },
       {
         hid: "keywords",
         name: "keywords",
-        content: `peanuts, quiz, experience, snoopy, charlie, brown`,
+        content: `construccion, casa, hogar, steel, frame, wood, financiacion`,
       },
       {
         hid: "author",
         name: "author",
-        content: `Peanuts`,
+        content: `VSF Construcciones`,
       },
       {
         hid: "image",
         name: "image",
         content:
-          "https://firebasestorage.googleapis.com/v0/b/lacoste-ecommerce.appspot.com/o/default.png?alt=media&token=be8d9c1d-d991-408e-9f13-dc2b390d0a43",
+          "https://firebasestorage.googleapis.com/v0/b/viviendassantafe.appspot.com/o/social-media.png?alt=media&token=68d83b7a-a712-4495-922c-3050a19b07e3",
       },
       { name: "format-detection", content: "telephone=no" },
       // Twitter
@@ -37,7 +37,7 @@ export default {
       {
         hid: "twitter:site",
         name: "twitter:site",
-        content: "@searchforsnoopy",
+        content: "@vsfconstrucciones",
       },
       {
         hid: "twitter:url",
@@ -47,17 +47,17 @@ export default {
       {
         hid: "twitter:title",
         name: "twitter:title",
-        content: "Peanuts Quiz | Which character are you?",
+        content: "Viviendas Santa Fe | Construccion sin estrés",
       },
       {
         hid: "twitter:description",
         name: "twitter:description",
-        content: `Play "Which character are you?" Quiz, and share which Peanuts Experience character you are!`,
+        content: `Con Viviendas Santa Fe, tener tu hogar es posible.`,
       },
       {
         hid: "twitter:image",
         name: "twitter:image",
-        content: "https://nuxtjs.org/nuxt-card.png",
+        content: "https://firebasestorage.googleapis.com/v0/b/viviendassantafe.appspot.com/o/social-media.png?alt=media&token=68d83b7a-a712-4495-922c-3050a19b07e3",
       },
 
       // Open Graph
@@ -65,28 +65,28 @@ export default {
       {
         hid: "og:site_name",
         property: "og:site_name",
-        content: "SearchForSnoopy",
+        content: "ViviendasSantaFe",
       },
       { hid: "og:type", property: "og:type", content: "website" },
       {
         hid: "og:url",
         property: "og:url",
-       /*  content: `${basePath}`, */
+        /*  content: `${basePath}`, */
       },
       {
         hid: "og:title",
         property: "og:title",
-        content: "Peanuts Quiz | Which character are you?",
+        content: "Viviendas Santa Fe | Construccion sin estrés",
       },
       {
         hid: "og:description",
         property: "og:description",
-        content: `Play "Which character are you?" Quiz, and share which Peanuts Experience character you are!`,
+        content: `Con Viviendas Santa Fe, tener tu hogar es posible.`,
       },
       {
         hid: "og:image",
         property: "og:image",
-        content: "https://nuxtjs.org/nuxt-card.png",
+        content: "https://firebasestorage.googleapis.com/v0/b/viviendassantafe.appspot.com/o/social-media.png?alt=media&token=68d83b7a-a712-4495-922c-3050a19b07e3",
       },
       {
         hid: "og:image:secure_url",
@@ -96,7 +96,7 @@ export default {
       {
         hid: "og:image:alt",
         property: "og:image:alt",
-        content: "Peanuts Quiz | Which character are you?",
+        content: "Viviendas Santa Fe | Construccion sin estrés",
       },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],

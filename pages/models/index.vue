@@ -77,6 +77,7 @@ div {
   background: $white url('@/assets/images/home-bg.svg') no-repeat fixed center
     20em;
   background-size: contain;
+  overflow-x: hidden;
 
   .models_mainContainer {
     padding: 7em 0 4em 0;

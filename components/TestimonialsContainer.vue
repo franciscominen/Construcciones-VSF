@@ -92,6 +92,7 @@ export default {
 @import '@/assets/main.scss';
 
 .testimonials_mainWrapper {
+  overflow-x: hidden;
   background: $blue url('@/assets/images/blue-pattern.svg') no-repeat fixed
     center 20em;
   background-size: contain;

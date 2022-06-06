@@ -125,7 +125,9 @@ export default {
 .img-consult {
   width: 50px;
   position: fixed;
-  z-index: 10;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  z-index: 15;
   right: 5%;
   bottom: 5%;
   cursor: pointer;
@@ -152,7 +154,7 @@ export default {
   position: fixed;
   right: 5%;
   bottom: 5%;
-  z-index: 10;
+  z-index: 15;
   transition: .5s ease;
   -webkit-transform: scale(1);
   transform: scale(1);

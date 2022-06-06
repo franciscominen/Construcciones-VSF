@@ -35,12 +35,13 @@ export default {
 @import '@/assets/main.scss';
 
 .aboutUs_mainWrapper {
+  overflow-x: hidden;
   min-height: auto;
   padding: 8em 6em 1em 6em;
-  background: $blue url('@/assets/images/blue-pattern.svg') no-repeat fixed
-    center 20em;
+  background: $white url('@/assets/images/home-bg.svg') no-repeat fixed center
+    20em;
   background-size: contain;
-
+  z-index: 0;
   h1 {
     color: $green;
     font-size: 68px;
@@ -57,7 +58,7 @@ export default {
     padding: 0 1.5em;
 
     p {
-      color: $white;
+      color: $blue;
       font-size: 32px;
       font-weight: 100;
       line-height: 1.4;
@@ -79,7 +80,7 @@ export default {
 
     h1 {
       color: $green;
-      font-size: 78px;
+      font-size: 56px;
       font-weight: 900;
       margin-bottom: 0.3em;
       text-align: left;
@@ -95,9 +96,8 @@ export default {
       padding: 0;
 
       p {
-        color: $white;
-        font-size: 32px;
-        font-weight: 100;
+        font-size: 22px;
+        font-weight: 400;
         line-height: 1.4;
         width: 100%;
       }
