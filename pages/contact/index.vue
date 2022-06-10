@@ -7,8 +7,8 @@
       <section class="contactForm_wrapper" data-aos='fade-in' data-aos-duration="700" data-aos-delay="300" >
         <h1>Soñas con tener tu propio hogar?</h1>
         <p>
-          Completa el formulario y nos contactaremos dentro de las las proximas
-          24hs, tambien podes enviarnos un e-mail o escribirnos por WhatsApp.
+          Completá el formulario y nos contactaremos dentro de las las próximas
+          24hs, también podes enviarnos un e-mail o escribirnos por WhatsApp.
         </p>
         <ContactForm />
       </section>

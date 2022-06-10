@@ -95,6 +95,8 @@ export default {
   overflow-x: hidden;
   background: $blue url('@/assets/images/blue-pattern.svg') no-repeat fixed
     center 20em;
+  -webkit-background: $blue url('@/assets/images/blue-pattern.svg') no-repeat
+    fixed center 20em;
   background-size: contain;
   padding: 4em 0;
   h1 {

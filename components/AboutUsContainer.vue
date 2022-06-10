@@ -1,12 +1,17 @@
 <template>
   <main class="aboutUs_mainWrapper" id="about">
-    <h1 data-aos="zoom-in" data-aos-duration="800">Quienes somos?</h1>
+    <h1 data-aos="zoom-in" data-aos-duration="800">¿Quiénes somos?</h1>
     <section class="aboutUs_infoWrapper">
       <p data-aos="fade-right" data-aos-duration="800">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi id
-        nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam mattis
-        ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
-        id nisl tincidunt quam mattis ac.
+        Somos una empresa argentina ubicada en la Provincia de Santa Fe, con
+        oficinas en la Capital y en la localidad de San Jorge. Abrimos nuestras
+        puertas en el año 2017, conformando un equipo de trabajo que se ocupa de
+        ofrecer un servicio de construcción amplio, unido por un acompañamiento
+        personal cercano con nuestros clientes durante todo el proceso,
+        iniciando en la venta y finalizando con la entrega de la llave de la
+        edificación. <br /><br />Brindando seguridad, resistencia y confort a
+        todo el país.<br />
+        Trabajamos por una <span style="color: #73E262; font-weight: 500">#ConstrucciónSinEstrés</span>.
       </p>
       <lottie-player
         data-aos-duration="800"
@@ -37,10 +42,12 @@ export default {
 .aboutUs_mainWrapper {
   overflow-x: hidden;
   min-height: auto;
-  padding: 8em 6em 1em 6em;
+  padding: 8em 6em 4em 6em;
   background: $white url('@/assets/images/home-bg.svg') no-repeat fixed center
     20em;
   background-size: contain;
+  -webkit-background: $white url('@/assets/images/home-bg.svg') no-repeat fixed
+    center 20em;
   z-index: 0;
   h1 {
     color: $green;
@@ -59,10 +66,10 @@ export default {
 
     p {
       color: $blue;
-      font-size: 32px;
-      font-weight: 100;
-      line-height: 1.4;
-      width: 35%;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.5;
+      width: 50%;
     }
     .aboutUs_animation {
       max-width: 450px;
@@ -76,8 +83,8 @@ export default {
   .aboutUs_mainWrapper {
     min-height: auto;
     padding: 6em 8% 2em 8%;
+    background: $white url('@/assets/images/home-bg.svg') no-repeat scroll top;
     background-size: 250%;
-
     h1 {
       color: $green;
       font-size: 56px;

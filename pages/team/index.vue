@@ -37,7 +37,7 @@
                 alt=""
                 class="title_icon"
               />
-              <h2>Equipo Fabrica</h2>
+              <h2>Equipo Fábrica</h2>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

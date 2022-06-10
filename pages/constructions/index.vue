@@ -9,11 +9,16 @@
           Procesos Constructivos
         </h1>
         <p data-aos="fade-down" data-aos-duration="700">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
-          id nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam
-          mattis ac.
+          En Viviendas Santa Fe <span style="color: #73E262">(VSF Construcciones)</span> dominamos 3 sistemas
+          constructivos, para ofrecer a nuestros clientes un servicio que se
+          adapte a su gusto.
         </p>
-        <section class="constructions_cardsWrapper" data-aos='fade-up' data-aos-duration="700" data-aos-delay="500">
+        <section
+          class="constructions_cardsWrapper"
+          data-aos="fade-up"
+          data-aos-duration="700"
+          data-aos-delay="500"
+        >
           <div class="constructions_card constructions_card-steel">
             <div>
               <img src="@/assets/images/icons/steel.svg" alt="" />
@@ -36,7 +41,7 @@
             <div>
               <img src="@/assets/images/icons/hibrid.svg" alt="" />
               <span>
-                <h2>Hibrida</h2>
+                <h2>Húmeda</h2>
                 <button @click="onShowHibrido">Que es?</button></span
               >
             </div>
@@ -137,7 +142,7 @@ export default {
     }
     p {
       font-size: 18px;
-      width: 35em;
+      width: 38em;
       margin: 0 auto;
     }
 

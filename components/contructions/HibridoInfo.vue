@@ -2,14 +2,12 @@
   <div class="main_container">
     <section>
       <div class="info_container" data-aos="fade-right" data-aos-duration="500">
-        <h1>Construccion Hibrida</h1>
+        <h1>Construccion Húmeda</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
-          id nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam
-          mattis ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-          facilisi id nisl tincidunt quam mattis ac. In facilisi id nisl
-          tincidunt quam mattis ac. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. In facilisi id nisl tincidunt.
+          Es el sistema constructivo más conocido que emplea el uso de cemento y
+          hormigón, materiales que requieren de un proceso de secado propio del
+          correr del tiempo. Se caracteriza por ser un estilo de construcción
+          noble y duradero.
         </p>
       </div>
       <img
@@ -29,14 +27,10 @@
         data-aos-duration="500"
       />
       <p data-aos="fade-left" data-aos-duration="500" data-aos-delay="600">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi id
-        nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam mattis
-        ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
-        id nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam
-        mattis ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-        facilisi id nisl tincidunt. In facilisi id nisl tincidunt quam mattis
-        ac. In facilisi id nisl tincidunt quam mattis ac. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. In facilisi id nisl.
+        En Viviendas Santa Fe ( VSF Construcciones ) empleamos este sistema
+        constructivo. Contamos con personal especializado que se ocupa y
+        supervisa de todo el proceso, para que el resultado sea como lo
+        proyectamos: funcional y perfecto.
       </p>
     </section>
     <button class="go-back" @click="onGoBackHibrido">

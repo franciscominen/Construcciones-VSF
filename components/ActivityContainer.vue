@@ -1,6 +1,6 @@
 <template>
   <main class="activity_mainWrapper" id="activity">
-    <h1 data-aos="zoom-in">A que nos dedicamos?</h1>
+    <h1 data-aos="zoom-in">¿A qué nos dedicamos?</h1>
     <section class="activity_infoWrapper">
       <lottie-player
         autoplay
@@ -12,14 +12,10 @@
         data-aos="fade-right"
       ></lottie-player>
       <p data-aos="fade-left">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi id
-        nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam mattis
-        ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
-        id nisl tincidunt quam mattis ac. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. In facilisi id nisl tincidunt quam mattis
-        ac. In facilisi id nisl tincidunt quam mattis ac. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. In facilisi id nisl tincidunt quam
-        mattis ac.
+        Nos dedicamos a la venta, diseño, planificación y producción de
+        construcciones en Sistemas Tradicionales: <span>Wood Frame</span>, <span>Steel Frame</span> y
+        <span>Húmedo</span>; y a la elaboración de aberturas para nuestras edificaciones, con
+        un acompañamiento personalizado durante todo el proceso.
       </p>
     </section>
   </main>
@@ -43,6 +39,8 @@ export default {
   padding: 6em 6em 4em 6em;
   background: $lightblue url('@/assets/images/lightblue-pattern.svg') no-repeat
     fixed center 20em;
+  -webkit-background: $lightblue url('@/assets/images/lightblue-pattern.svg')
+    no-repeat fixed center 20em;
   background-size: contain;
   display: flex;
   flex-direction: column;
@@ -66,10 +64,14 @@ export default {
 
     p {
       color: $white;
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 100;
-      line-height: 1.4;
-      width: 50%;
+      line-height: 1.5;
+      width: 40%;
+      span {
+        color: $green;
+        font-weight: 600;
+      }
     }
 
     .activity_animation {

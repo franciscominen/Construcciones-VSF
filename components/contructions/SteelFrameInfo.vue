@@ -4,12 +4,12 @@
       <div class="info_container" data-aos="fade-right" data-aos-duration="500">
         <h1>Steel Frame</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
-          id nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam
-          mattis ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-          facilisi id nisl tincidunt quam mattis ac. In facilisi id nisl
-          tincidunt quam mattis ac. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. In facilisi id nisl tincidunt.
+          Es un sistema constructivo en seco que emplea perfiles de acero
+          galvanizado en su estructura junto con otros componentes de aislación,
+          sujeción, división y terminación. Se caracteriza por ser un estilo de
+          construcción un 70 % más rápido que una obra húmeda, por su
+          adaptabilidad a cualquier tipo de proyecto, su durabilidad ( 300 años
+          ), su optimización en materiales, entre otros beneficios.
         </p>
       </div>
       <img
@@ -29,14 +29,15 @@
         data-aos-duration="500"
       />
       <p data-aos="fade-left" data-aos-duration="500" data-aos-delay="600">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi id
-        nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam mattis
-        ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
-        id nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam
-        mattis ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-        facilisi id nisl tincidunt. In facilisi id nisl tincidunt quam mattis
-        ac. In facilisi id nisl tincidunt quam mattis ac. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. In facilisi id nisl.
+        En Viviendas Santa Fe ( VSF Construcciones ) nos especializamos en este
+        sistema constructivo. En nuestra fábrica nos ocupamos desde armado de
+        las estructuras de acero pasando al montaje y acabado final de la obra
+        en su terreno. Contamos con personal especializado que se ocupa y
+        supervisa de todo el proceso, para que el resultado sea como lo
+        proyectamos: funcional y perfecto. Nuestras obras se caracterizan por
+        ser de Construcción Mixta. Empleamos el Sistema Tradicional Húmedo ( uso
+        de ladrillos, cemento y hormigón ) para el revestimiento y estructuras
+        externas de la obra.
       </p>
     </section>
     <button class="go-back" @click="onGoBackSteel">

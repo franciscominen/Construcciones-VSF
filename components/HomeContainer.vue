@@ -19,7 +19,7 @@
         class="socialMedia-links"
       />
       <NuxtLink :to="{ path: '/', hash: '#about' }" class="goToAbout_button">
-        <h3>Descubri sobre nosotros</h3>
+        <h3>Descubrí sobre nosotros</h3>
         <img src="@/assets/images/icons/down-arrow.svg" alt="" />
       </NuxtLink>
       <figure></figure>
@@ -29,12 +29,11 @@
 
 <script lang='ts'>
 import SocialMediaLinks from '@/components/SocialMediaLinks.vue'
-import ConsultModal from './ConsultModal.vue'
 import aosMixin from '@/mixins/aos'
 
 export default {
   name: 'HomeContainer',
-  components: { SocialMediaLinks, ConsultModal },
+  components: { SocialMediaLinks },
   mixins: [aosMixin],
 }
 </script>
@@ -47,6 +46,8 @@ export default {
   height: 100vh;
   background: $white url('@/assets/images/home-bg.svg') no-repeat fixed center
     20em;
+  -webkit-background: $white url('@/assets/images/home-bg.svg') no-repeat fixed
+    center 20em;
   background-size: contain;
   display: flex;
   flex-direction: column;
@@ -61,7 +62,8 @@ export default {
     max-height: 100em;
     object-fit: contain;
     h1 {
-      -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
+      -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1s
+        both;
       animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
       font-size: 68px;
       font-weight: 900;
@@ -72,8 +74,8 @@ export default {
       }
     }
     .animation_home {
-      -webkit-animation: fade-in-fwd 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1.4s
-        both;
+      -webkit-animation: fade-in-fwd 0.8s cubic-bezier(0.39, 0.575, 0.565, 1)
+        1.4s both;
       animation: fade-in-fwd 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1.4s both;
       max-width: 750px;
       min-width: 200px;
@@ -86,8 +88,8 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    -webkit-animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
-      1.6s both;
+    -webkit-animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 1.6s
+      both;
     animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 1.6s both;
     .img-consult {
       position: sticky;
