@@ -42,7 +42,7 @@ export default {
       {
         hid: "twitter:url",
         name: "twitter:url",
-        /* content: `${basePath}`, */
+        content: "https://www.vsfconstrucciones.com/"
       },
       {
         hid: "twitter:title",
@@ -71,7 +71,7 @@ export default {
       {
         hid: "og:url",
         property: "og:url",
-        /*  content: `${basePath}`, */
+         content: "https://www.vsfconstrucciones.com/",
       },
       {
         hid: "og:title",
@@ -85,13 +85,14 @@ export default {
       },
       {
         hid: "og:image",
+        itemprop: "image",
         property: "og:image",
         content: "https://firebasestorage.googleapis.com/v0/b/viviendassantafe.appspot.com/o/social-media.png?alt=media&token=68d83b7a-a712-4495-922c-3050a19b07e3",
       },
       {
         hid: "og:image:secure_url",
         property: "og:image:secure_url",
-        /* content: `${basePath}`, */
+        content: "https://www.vsfconstrucciones.com/"
       },
       {
         hid: "og:image:alt",
