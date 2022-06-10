@@ -1,0 +1,85 @@
+@import "./styles/variables.scss";
+@import "./styles/keyframes.scss";
+
+:root {
+    background-attachment: fixed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $white;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 0 5%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $displayFont;
+}
+
+p,
+a {
+    font-family: $textFont;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: $textFont;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .navbar-desktop {
+        display: none !important;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $lightblue;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+
