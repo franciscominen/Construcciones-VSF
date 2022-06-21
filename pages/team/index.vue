@@ -4,9 +4,16 @@
     <NavbarMobile class="navbar-mobile" />
     <ConsultModal />
     <main>
-      <h1 data-aos='fade-in' data-aos-duration="500" >Equipo Viviendas Santa Fe</h1>
+      <h1 data-aos="fade-in" data-aos-duration="500">
+        Equipo Viviendas Santa Fe
+      </h1>
       <section class="teams_container">
-        <article class="team_container" data-aos='fade-right' data-aos-duration="700" data-aos-delay='300'>
+        <article
+          class="team_container"
+          data-aos="fade-right"
+          data-aos-duration="700"
+          data-aos-delay="300"
+        >
           <img src="@/assets/images/ventas.png" alt="" class="team_img" />
           <div class="team_containerInfo">
             <div>
@@ -18,17 +25,26 @@
               <h2>Equipo Ventas</h2>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis sequi sapiente dolores culpa quibusdam quas dolor.
-              Voluptas veritatis at, consequuntur veniam, reprehenderit eaque
-              eligendi minus exercitationem corrupti quisquam fugit? Libero.
-              Voluptas veritatis at, consequuntur veniam, reprehenderit eaque
-              eligendi minus exercitationem corrupti quisquam fugit? Libero.
+              Nuestro Equipo de Ventas está conformado por personas preparadas
+              para asesorar y acompañar, de la mejor manera, a nuestros clientes
+              durante todo el proceso de proyección y concreción de sus
+              construcciones. También, capacitadas para atender cualquier
+              inquietud sobre nuestros Sistemas Constructivos y brindar
+              información constante sobre el estado de las obras
+              correspondientes.
+              <br /><br />
+              Estamos preparados para encarar cada proyecto de manera que sea
+              una <span style="color: #73e262">#ConstrucciónSinestrés</span>
             </p>
           </div>
         </article>
 
-        <article class="team_container" data-aos='fade-right' data-aos-duration="700" data-aos-delay='600'>
+        <article
+          class="team_container"
+          data-aos="fade-right"
+          data-aos-duration="700"
+          data-aos-delay="600"
+        >
           <img src="@/assets/images/fabrica.png" alt="" class="team_img" />
           <div class="team_containerInfo">
             <div>
@@ -40,18 +56,21 @@
               <h2>Equipo Fábrica</h2>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis sequi sapiente dolores culpa quibusdam quas dolor.
-              Voluptas veritatis at, consequuntur veniam, reprehenderit eaque
-              eligendi minus exercitationem corrupti quisquam fugit? Libero.
-              Voluptas veritatis at, consequuntur veniam, reprehenderit eaque
-              eligendi minus exercitationem corrupti quisquam fugit? Libero.
+              Nuestro Equipo de Fábrica está conformado un grupo de personas
+              especializado en la logística y proyección de nuestras obras, y
+              otro en la construcción de las mismas. Ambos en constante diálogo,
+              se ensamblan y hacen que cada proyecto se realice de la mejor
+              manera, aumentando la eficacia y agilizando los tiempos de
+              ejecución. 
+              <br /><br />
+              Todo nuestro personal se ocupa por lograr que cada
+              proyecto sea una <span style="color: #73e262">#ConstrucciónSinestrés</span>
             </p>
           </div>
         </article>
       </section>
 
-      <section class="teamCards_container" data-aos='fade-up'>
+<!--       <section class="teamCards_container" data-aos="fade-up">
         <article class="team_card">
           <div>
             <img src="@/assets/images/icons/mision.svg" alt="" />
@@ -88,7 +107,7 @@
             harum hic! Veniam, sapiente asperiores?
           </p>
         </article>
-      </section>
+      </section> -->
     </main>
     <Footer />
   </div>

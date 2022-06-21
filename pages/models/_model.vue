@@ -4,7 +4,11 @@
     <NavbarMobile class="navbar-mobile" />
     <ConsultModal />
     <section class="modelDescript_container">
-      <section class="carousel_wrapper" data-aos='fade-in' data-aos-duration="900" >
+      <section
+        class="carousel_wrapper"
+        data-aos="fade-in"
+        data-aos-duration="900"
+      >
         <ModelImagesCarousel :model="model" />
         <article>
           <h1>Modelo {{ model.name }}</h1>
@@ -40,15 +44,14 @@
           </ul>
         </article>
       </section>
-      <p class="model_description" data-aos='fade-up' data-aos-duration="700" >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi id
-        nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam mattis
-        ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisi
-        id nisl tincidunt quam mattis ac. In facilisi id nisl tincidunt quam
-        mattis ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-        facilisi id nisl tincidunt. Lorem ipsum dolor sit amet,
+      <p class="model_description" data-aos="fade-up" data-aos-duration="700">
+        {{model.descrip}}
+        <br /><br />
+        Los planos de nuestros modelos son totalmente PERSONALIZABLES y se
+        pueden rediseñar según el confort y la necesidad del cliente.
+        <br /><br />
         <span @click="goToContact"
-          >consulta sin compromiso por el modelo {{ model.name }}</span
+          >Consulta sin compromiso por el modelo {{ model.name }}</span
         >.
       </p>
       <NuxtLink to="/models">Volver a Modelos</NuxtLink>
@@ -111,7 +114,7 @@ export default {
 }
 
 .modelDescript_container {
-  max-width: 58em;
+  max-width: 60em;
   width: 100%;
   object-fit: cover;
   margin: 0 auto;

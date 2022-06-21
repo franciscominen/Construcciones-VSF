@@ -2,7 +2,6 @@
   <hooper :settings="hooperSettings">
     <slide><img :src="model.img1" alt="" /></slide>
     <slide><img :src="model.img2" alt="" /></slide>
-    <slide><img :src="model.img3" alt="" /></slide>
     <hooper-pagination slot="hooper-addons"></hooper-pagination>
   </hooper>
 </template>
