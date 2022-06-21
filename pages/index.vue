@@ -4,7 +4,6 @@
     <NavbarMobile class="navbar-mobile" />
     <HomeContainer />
     <AboutUsContainer />
-    <TestimonialsContainer />
     <ActivityContainer />
     <ConsultModal />
     <Footer />

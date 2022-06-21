@@ -16,12 +16,12 @@
       <ul class="contactData_wrapper" data-aos='fade-left' data-aos-duration="700" >
         <li>
           <p>Telefonos:</p>
-          <h4>+54 9 (342) 433 1234</h4>
-          <h4>+54 9 (342) 433 1234</h4>
+          <h4>+54 9 (340) 640 0050</h4>
+          <h4>+54 9 (342) 612 6601</h4>
         </li>
         <li>
           <p>Email:</p>
-          <h4>viviendassantafe@gmail.com</h4>
+          <h4>infovsfconstrucciones@gmail.com</h4>
         </li>
         <li>
           <p>Seguinos:</p>

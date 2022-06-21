@@ -16,7 +16,7 @@
       /></a>
     </li>
     <li>
-      <a href=""><img src="@/assets/images/icons/wsp-icon.svg" alt="" /></a>
+      <a href="https://wa.me/+5493426126601?text=Hola!%20Quisiera%20realizar%20una%20consulta"><img src="@/assets/images/icons/wsp-icon.svg" alt="" /></a>
     </li>
   </ul>
 </template>
