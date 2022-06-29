@@ -1,6 +1,6 @@
 <template>
   <div class="model_card">
-    <img src="@/assets/images/house.jpg" alt="" class="model_img" />
+    <img :src="model.img1" alt="" class="model_img" />
 
     <article>
       <h1>Modelo {{ model.name }}</h1>
@@ -60,8 +60,10 @@ export default {
   width: auto;
   height: auto;
   .model_img {
-    max-width: 380px;
+    max-width: 390px;
     min-width: 100px;
+    max-height: 280px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 6px 6px 0 0;

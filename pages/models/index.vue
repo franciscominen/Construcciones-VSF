@@ -80,7 +80,7 @@ div {
   overflow-x: hidden;
 
   .models_mainContainer {
-    padding: 7em 0 4em 0;
+    padding: 7em 15px 4em 15px;
     margin: 0 auto;
     min-height: 100vh;
     max-width: 75em;
